@@ -1,0 +1,63 @@
+
+.five {
+    block-size: fit-content;
+    inline-size: 100%;
+    background-color: #f5f5f7;
+    display: flex;
+    flex-direction: row;
+}
+
+.endofpage {
+    color: #0000008f;
+    font-size: 12px;
+    margin: 15px 15px 15px 100px;
+}
+
+ul.legal {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    list-style: none;
+}
+
+.legalli{
+    margin: 0px 20px 0px 0px;
+}
+
+.five .endofpage a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: inherit; /* Renk değişikliğini önler */
+    background-color: #f5f5f7;
+}
+
+.five .endofpage a:hover,
+.five .endofpage a:focus,
+.five .endofpage a:active {
+    text-decoration: none;
+    color: #06c;
+    background-color: #f5f5f7;
+}
+
+.underline {
+    text-decoration: underline !important;
+    color: #06c !important;
+}
+
+.divider {
+    border-block-start: 1px solid #0000008f;
+    margin: 16px 0;
+    inline-size: 100%;
+}
+
+/* Macbook 768px and 1199px */
+@media screen and (max-width: 1199px) {
+    .endofpage {
+        margin: 15px 15px 15px 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .endofpage {
+        font-size: 10px;
+    }
+}

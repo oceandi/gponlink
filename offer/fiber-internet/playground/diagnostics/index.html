@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ağ Teşhis Araçları | ISP Tools</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            font-size: 21px;
+            color: #6e6e73;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #1d1d1f;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: #007AFF;
+            outline: none;
+        }
+
+        .test-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .test-button:hover {
+            transform: scale(1.05);
+        }
+
+        .test-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .results {
+            margin-top: 20px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .result-item {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-weight: 500;
+            color: #1d1d1f;
+        }
+
+        .result-value {
+            color: #007AFF;
+            font-weight: 600;
+        }
+
+        .chart-container {
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #f5f5f7;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+            
+            .header p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ağ Teşhis Araçları</h1>
+            <p>DNS ve Ping testleri ile ağınızı analiz edin</p>
+        </div>
+
+        <div class="card">
+            <div class="tabs">
+                <button class="tab active" data-tab="dns">DNS Test</button>
+                <button class="tab" data-tab="ping">Ping Test</button>
+            </div>
+
+            <div id="dns-test" class="test-panel">
+                <div class="input-group">
+                    <label>Domain Adı</label>
+                    <input type="text" id="domain" placeholder="örnek: google.com">
+                </div>
+
+                <div class="input-group">
+                    <label>DNS Sunucusu</label>
+                    <select id="dns-server">
+                        <option value="8.8.8.8">Google DNS (8.8.8.8)</option>
+                        <option value="1.1.1.1">Cloudflare DNS (1.1.1.1)</option>
+                        <option value="208.67.222.222">OpenDNS (208.67.222.222)</option>
+                        <option value="9.9.9.9">Quad9 (9.9.9.9)</option>
+                    </select>
+                </div>
+
+                <button class="test-button" id="dns-test-button">DNS Testi Başlat</button>
+
+                <div class="results" id="dns-results" style="display: none;">
+                    <!-- Sonuçlar buraya eklenecek -->
+                </div>
+            </div>
+
+            <div id="ping-test" class="test-panel" style="display: none;">
+                <div class="input-group">
+                    <label>Hedef IP veya Domain</label>
+                    <input type="text" id="ping-target" placeholder="örnek: 8.8.8.8 veya google.com">
+                </div>
+
+                <div class="input-group">
+                    <label>Ping Sayısı</label>
+                    <select id="ping-count">
+                        <option value="4">4 ping</option>
+                        <option value="8">8 ping</option>
+                        <option value="16">16 ping</option>
+                    </select>
+                </div>
+
+                <button class="test-button" id="ping-test-button">Ping Testi Başlat</button>
+
+                <div class="chart-container">
+                    <canvas id="pingChart"></canvas>
+                </div>
+
+                <div class="results" id="ping-results" style="display: none;">
+                    <!-- Sonuçlar buraya eklenecek -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab değiştirme fonksiyonalitesi
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                document.querySelectorAll('.test-panel').forEach(panel => {
+                    panel.style.display = 'none';
+                });
+                
+                document.getElementById(`${tab.dataset.tab}-test`).style.display = 'block';
+            });
+        });
+
+        // DNS Test fonksiyonları
+        document.getElementById('dns-test-button').addEventListener('click', async function() {
+            const button = this;
+            const domain = document.getElementById('domain').value;
+            const dnsServer = document.getElementById('dns-server').value;
+            const resultsDiv = document.getElementById('dns-results');
+
+            if (!domain) {
+                alert('Lütfen bir domain adı girin');
+                return;
+            }
+
+            button.disabled = true;
+            button.textContent = 'Test Ediliyor...';
+
+            try {
+                const startTime = performance.now();
+                const response = await fetch(`https://dns.google/resolve?name=${domain}`);
+                const data = await response.json();
+                const endTime = performance.now();
+                const responseTime = Math.floor(endTime - startTime);
+
+                resultsDiv.style.display = 'block';
+                resultsDiv.innerHTML = `
+                    <div class="result-item">
+                        <span class="result-label">Domain</span>
+                        <span class="result-value">${domain}</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">DNS Sunucusu</span>
+                        <span class="result-value">${dnsServer}</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Yanıt Süresi</span>
+                        <span class="result-value">${responseTime} ms</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">IP Adresi</span>
+                        <span class="result-value">${data.Answer ? data.Answer[0].data : 'Bulunamadı'}</span>
+                    </div>
+                `;
+            } catch (error) {
+                resultsDiv.style.display = 'block';
+                resultsDiv.innerHTML = `
+                    <div class="result-item" style="color: #ff3b30">
+                        <span class="result-label">Hata</span>
+                        <span class="result-value">DNS sorgusu başarısız oldu</span>
+                    </div>
+                `;
+            }
+
+            button.disabled = false;
+            button.textContent = 'DNS Testi Başlat';
+        });
+
+        // Ping Test fonksiyonları
+        const pingChart = new Chart(document.getElementById('pingChart').getContext('2d'), {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Ping Süresi (ms)',
+                    data: [],
+                    borderColor: '#007AFF',
+                    tension: 0.4,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Milisaniye (ms)'
+                        }
+                    }
+                }
+            }
+        });
+
+        document.getElementById('ping-test-button').addEventListener('click', async function() {
+            const button = this;
+            const target = document.getElementById('ping-target').value;
+            const count = parseInt(document.getElementById('ping-count').value);
+            const resultsDiv = document.getElementById('ping-results');
+
+            if (!target) {
+                alert('Lütfen bir hedef girin');
+                return;
+            }
+
+            button.disabled = true;
+            button.textContent = 'Test Ediliyor...';
+
+            // HTTP yanıt sürelerini ölç
+            const pingTimes = [];
+            const labels = [];
+
+            try {
+                for (let i = 1; i <= count; i++) {
+                    const startTime = performance.now();
+                    await fetch(`https://${target}`, { mode: 'no-cors' });
+                    const endTime = performance.now();
+                    const pingTime = Math.floor(endTime - startTime);
+                    
+                    pingTimes.push(pingTime);
+                    labels.push(`Test ${i}`);
+
+                    pingChart.data.labels = labels;
+                    pingChart.data.datasets[0].data = pingTimes;
+                    pingChart.update();
+                }
+
+                const avgPing = Math.floor(pingTimes.reduce((a, b) => a + b, 0) / pingTimes.length);
+                const minPing = Math.min(...pingTimes);
+                const maxPing = Math.max(...pingTimes);
+
+                resultsDiv.style.display = 'block';
+                resultsDiv.innerHTML = `
+                    <div class="result-item">
+                        <span class="result-label">Hedef</span>
+                        <span class="result-value">${target}</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Ortalama Yanıt Süresi</span>
+                        <span class="result-value">${avgPing} ms</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">En Düşük Yanıt Süresi</span>
+                        <span class="result-value">${minPing} ms</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">En Yüksek Yanıt Süresi</span>
+                        <span class="result-value">${maxPing} ms</span>
+                    </div>
+                `;
+            } catch (error) {
+                resultsDiv.style.display = 'block';
+                resultsDiv.innerHTML = `
+                    <div class="result-item" style="color: #ff3b30">
+                        <span class="result-label">Hata</span>
+                        <span class="result-value">Bağlantı hatası</span>
+                    </div>
+                `;
+            }
+
+            button.disabled = false;
+            button.textContent = 'Ping Testi Başlat';
+        });
+    </script>
+</body>
+</html>

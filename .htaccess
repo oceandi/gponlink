@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.superonline-deha\.net$ [NC]
+RewriteRule (.*) https://gponlink.com/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
