@@ -35,7 +35,7 @@ html, body {
     background: linear-gradient(to bottom, #0D1443 0%, #394F9C 40%, #A6B6E8 80%, #FFFFFF 100%);
 }
 .image2{
-    background-image: url();
+    background: linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853);
 }
 .image3{
     background-image: linear-gradient(#addcee, #eff5f7);

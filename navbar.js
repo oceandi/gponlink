@@ -2,7 +2,7 @@ function createNavbar() {
     const navbarHTML = `
         <nav class="navbar">
             <a class="noact" href="">
-                <img class="navlogo" src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/icon.png">
+                <img class="navlogo" src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/logo.png">
             </a>
             <div class="nwa">
                 <ul class="nav-menu">
