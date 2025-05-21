@@ -8,7 +8,7 @@ function createNavbar() {
                 <ul class="nav-menu">
                     <li><a href="" draggable="false">Router</a></li>
                     <li><a href="" draggable="false">AP</a></li>
-                    <li><a href="" draggable="false">Booster</a></li>
+                    <li><a href="" draggable="false">Powerline</a></li>
                     <li><a href="" draggable="false">Mesh</a></li>
                     <li><a href="tel:+905321583184" draggable="false">Destek</a></li>
                 </ul>
