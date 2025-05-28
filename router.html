@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Router - GponLink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/logo.png">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <script src="navbar.js"></script>
+    
+    <!-- Hero Section -->
+    <section class="product-hero">
+        <div class="hero-content">
+            <h1 class="product-title">Router</h1>
+            <p class="product-subtitle">Yeni nesil WiFi 6 teknolojisi.<br>Ultra hızlı. Ultra güvenilir.</p>
+            <div class="hero-pricing">
+                <span class="price">₺2.999</span>
+                <span class="price-info">'den başlayan fiyatlarla</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#buy" class="btn-primary">Satın Al</a>
+                <a href="#specs" class="btn-secondary">Teknik Özellikler</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="static/index/router.png" alt="Router">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Öne Çıkan Özellikler</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📶</div>
+                    <h3>WiFi 6 Teknolojisi</h3>
+                    <p>802.11ax standardı ile 4 kata kadar daha hızlı bağlantı</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>AX3000 Hız</h3>
+                    <p>2.4GHz'de 574 Mbps + 5GHz'de 2402 Mbps toplam hız</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Geniş Kapsama</h3>
+                    <p>4 harici anten ile 200m²'ye kadar kapsama alanı</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Çoklu Cihaz</h3>
+                    <p>OFDMA teknolojisi ile 64'e kadar cihaz desteği</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Section -->
+    <section class="design-section">
+        <div class="container">
+            <div class="design-content">
+                <div class="design-text">
+                    <h2>Minimalist Tasarım</h2>
+                    <p>Modern ve şık tasarımıyla evinizin her köşesine uyum sağlar. Kompakt yapısı sayesinde minimum yer kaplar.</p>
+                    <ul class="design-features">
+                        <li>Mat siyah kaplama</li>
+                        <li>LED gösterge sistemi</li>
+                        <li>Dikey veya yatay kullanım</li>
+                        <li>Duvar montaj desteği</li>
+                    </ul>
+                </div>
+                <div class="design-image">
+                    <img src="static/index/router-design.png" alt="Router Design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="specs-section">
+        <div class="container">
+            <h2 class="section-title">Teknik Özellikler</h2>
+            <div class="specs-tabs">
+                <button class="spec-tab active" onclick="showSpec('wireless')">Kablosuz</button>
+                <button class="spec-tab" onclick="showSpec('hardware')">Donanım</button>
+                <button class="spec-tab" onclick="showSpec('software')">Yazılım</button>
+                <button class="spec-tab" onclick="showSpec('physical')">Fiziksel</button>
+            </div>
+            
+            <div class="spec-content active" id="wireless">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">WiFi Standardı</span>
+                        <span class="spec-value">802.11ax (WiFi 6)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Frekans Bantları</span>
+                        <span class="spec-value">2.4 GHz ve 5 GHz (Dual Band)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Maksimum Hız</span>
+                        <span class="spec-value">AX3000 (574 + 2402 Mbps)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Anten</span>
+                        <span class="spec-value">4x Harici Yüksek Kazançlı Anten</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="hardware">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">İşlemci</span>
+                        <span class="spec-value">1.5 GHz Quad-Core CPU</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RAM</span>
+                        <span class="spec-value">512 MB DDR3</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Flash Bellek</span>
+                        <span class="spec-value">128 MB</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ethernet Portları</span>
+                        <span class="spec-value">1x WAN + 4x LAN Gigabit</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="software">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Güvenlik</span>
+                        <span class="spec-value">WPA3, WPA2, Güvenlik Duvarı</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">QoS</span>
+                        <span class="spec-value">Akıllı Bant Genişliği Yönetimi</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">VPN</span>
+                        <span class="spec-value">PPTP, L2TP, OpenVPN Desteği</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Yönetim</span>
+                        <span class="spec-value">Web Arayüzü, Mobil Uygulama</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="physical">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Boyutlar</span>
+                        <span class="spec-value">230 x 144 x 35 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ağırlık</span>
+                        <span class="spec-value">450 gram</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Güç Tüketimi</span>
+                        <span class="spec-value">Maksimum 12W</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Çalışma Sıcaklığı</span>
+                        <span class="spec-value">0°C ~ 40°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy" class="buy-section">
+        <div class="container">
+            <h2 class="section-title">Hangi Router size uygun?</h2>
+            <div class="models-grid">
+                <div class="model-card">
+                    <h3>AX1800</h3>
+                    <p class="model-price">₺2.999</p>
+                    <ul class="model-features">
+                        <li>WiFi 6 teknolojisi</li>
+                        <li>1.8 Gbps toplam hız</li>
+                        <li>150 m²'ye kadar kapsama</li>
+                        <li>32 cihaza kadar</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('AX1800', 2999)">Satın Al</button>
+                </div>
+                
+                <div class="model-card featured">
+                    <div class="badge">Önerilen</div>
+                    <h3>AX3000</h3>
+                    <p class="model-price">₺3.999</p>
+                    <ul class="model-features">
+                        <li>WiFi 6 teknolojisi</li>
+                        <li>3.0 Gbps toplam hız</li>
+                        <li>200 m²'ye kadar kapsama</li>
+                        <li>64 cihaza kadar</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('AX3000', 3999)">Satın Al</button>
+                </div>
+                
+                <div class="model-card">
+                    <h3>AX6000</h3>
+                    <p class="model-price">₺5.999</p>
+                    <ul class="model-features">
+                        <li>WiFi 6 teknolojisi</li>
+                        <li>6.0 Gbps toplam hız</li>
+                        <li>300 m²'ye kadar kapsama</li>
+                        <li>128 cihaza kadar</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('AX6000', 5999)">Satın Al</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-card">
+                    <h3>📦 Ücretsiz Kargo</h3>
+                    <p>Tüm siparişlerinizde ücretsiz kargo</p>
+                </div>
+                <div class="support-card">
+                    <h3>🔧 Ücretsiz Kurulum</h3>
+                    <p>Profesyonel ekibimiz tarafından ücretsiz kurulum</p>
+                </div>
+                <div class="support-card">
+                    <h3>🛡️ 2 Yıl Garanti</h3>
+                    <p>Tüm ürünlerimizde 2 yıl üretici garantisi</p>
+                </div>
+                <div class="support-card">
+                    <h3>📞 7/24 Destek</h3>
+                    <p>Teknik destek hattımız her zaman yanınızda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Modal -->
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBuyModal()">&times;</span>
+            <h2>Sipariş Formu</h2>
+            <form id="orderForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="hidden" name="product" id="productName">
+                <input type="hidden" name="price" id="productPrice">
+                
+                <div class="form-group">
+                    <label>Ad Soyad</label>
+                    <input type="text" name="fullname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Telefon</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>E-posta</label>
+                    <input type="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Adres</label>
+                    <textarea name="address" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>İl</label>
+                    <input type="text" name="city" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>İlçe</label>
+                    <input type="text" name="district" required>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Sipariş Özeti</h3>
+                    <div class="summary-item">
+                        <span id="summaryProduct"></span>
+                        <span id="summaryPrice"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Kargo</span>
+                        <span>Ücretsiz</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Toplam</span>
+                        <span id="totalPrice"></span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">Siparişi Tamamla</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="footer.js"></script>
+    <script src="product-scripts.js"></script>
+</body>
+</html>
