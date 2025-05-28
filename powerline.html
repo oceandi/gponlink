@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Powerline Adaptör - GponLink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/logo.png">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <script src="navbar.js"></script>
+    
+    <!-- Hero Section -->
+    <section class="product-hero">
+        <div class="hero-content">
+            <h1 class="product-title">Powerline Adaptör</h1>
+            <p class="product-subtitle">Elektrik kabloları üzerinden internet.<br>Her prize bir ethernet portu.</p>
+            <div class="hero-pricing">
+                <span class="price">₺1.999</span>
+                <span class="price-info">'den başlayan fiyatlarla</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#buy" class="btn-primary">Satın Al</a>
+                <a href="#specs" class="btn-secondary">Teknik Özellikler</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="static/index/powerline.png" alt="Powerline">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Basit. Hızlı. Güvenilir.</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>Tak ve Çalıştır</h3>
+                    <p>Kurulum gerektirmez, prize takın ve kullanmaya başlayın</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>300m Menzil</h3>
+                    <p>Aynı elektrik hattında 300 metreye kadar bağlantı</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>2000 Mbps Hız</h3>
+                    <p>G.hn teknolojisi ile ultra hızlı veri transferi</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>128-bit AES</h3>
+                    <p>Askeri seviye şifreleme ile güvenli bağlantı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="design-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Nasıl Çalışır?</h2>
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Modem Yanına Takın</h3>
+                    <p>İlk adaptörü modeminizin yanındaki prize takın ve ethernet kablosuyla bağlayın</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>İkinci Adaptörü Takın</h3>
+                    <p>İkinci adaptörü internet istediğiniz odadaki prize takın</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Eşleştirme Butonu</h3>
+                    <p>Her iki adaptördeki eşleştirme butonuna basın, 2 dakika içinde bağlantı kurulur</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Kullanmaya Başlayın</h3>
+                    <p>Ethernet kablosu veya dahili WiFi ile cihazlarınızı bağlayın</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="specs-section">
+        <div class="container">
+            <h2 class="section-title">Teknik Özellikler</h2>
+            <div class="specs-tabs">
+                <button class="spec-tab active" onclick="showSpec('performance')">Performans</button>
+                <button class="spec-tab" onclick="showSpec('connectivity')">Bağlantı</button>
+                <button class="spec-tab" onclick="showSpec('features')">Özellikler</button>
+                <button class="spec-tab" onclick="showSpec('physical')">Fiziksel</button>
+            </div>
+            
+            <div class="spec-content active" id="performance">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Powerline Standardı</span>
+                        <span class="spec-value">G.hn Wave 2</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Maksimum Hız</span>
+                        <span class="spec-value">2000 Mbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Frekans Bandı</span>
+                        <span class="spec-value">2-86 MHz</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Maksimum Menzil</span>
+                        <span class="spec-value">300 metre</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="connectivity">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Ethernet Portları</span>
+                        <span class="spec-value">2x Gigabit Ethernet</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">WiFi (Select Modeller)</span>
+                        <span class="spec-value">802.11ac Dual Band</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">WiFi Hızı</span>
+                        <span class="spec-value">AC1200 (300+867 Mbps)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Pass-Through Priz</span>
+                        <span class="spec-value">Dahili (Güç kaybı yok)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="features">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Şifreleme</span>
+                        <span class="spec-value">128-bit AES</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">QoS</span>
+                        <span class="spec-value">Otomatik Önceliklendirme</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Enerji Tasarrufu</span>
+                        <span class="spec-value">Otomatik Güç Yönetimi</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Uyumluluk</span>
+                        <span class="spec-value">HomePlug AV2 ile uyumlu</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="physical">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Boyutlar</span>
+                        <span class="spec-value">58 x 90 x 40 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ağırlık</span>
+                        <span class="spec-value">120 gram</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Güç Tüketimi</span>
+                        <span class="spec-value">Maksimum 6W</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Çalışma Sıcaklığı</span>
+                        <span class="spec-value">0°C ~ 40°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy" class="buy-section">
+        <div class="container">
+            <h2 class="section-title">Size Uygun Kit</h2>
+            <div class="models-grid">
+                <div class="model-card">
+                    <h3>Starter Kit</h3>
+                    <p class="model-price">₺1.999</p>
+                    <ul class="model-features">
+                        <li>2 adet adaptör</li>
+                        <li>1000 Mbps hız</li>
+                        <li>1x Gigabit Ethernet</li>
+                        <li>Kompakt tasarım</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('Starter Kit', 1999)">Satın Al</button>
+                </div>
+                
+                <div class="model-card featured">
+                    <div class="badge">Tavsiye Edilen</div>
+                    <h3>WiFi Kit</h3>
+                    <p class="model-price">₺2.999</p>
+                    <ul class="model-features">
+                        <li>2 adet WiFi adaptör</li>
+                        <li>1200 Mbps powerline</li>
+                        <li>AC1200 dual-band WiFi</li>
+                        <li>2x Gigabit Ethernet</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('WiFi Kit', 2999)">Satın Al</button>
+                </div>
+                
+                <div class="model-card">
+                    <h3>Pro Kit</h3>
+                    <p class="model-price">₺4.499</p>
+                    <ul class="model-features">
+                        <li>3 adet WiFi adaptör</li>
+                        <li>2000 Mbps G.hn</li>
+                        <li>AC1200 WiFi + Mesh</li>
+                        <li>Pass-through priz</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('Pro Kit', 4499)">Satın Al</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-card">
+                    <h3>📦 Hızlı Kargo</h3>
+                    <p>24 saat içinde kargoda</p>
+                </div>
+                <div class="support-card">
+                    <h3>🔧 Kolay Kurulum</h3>
+                    <p>Detaylı Türkçe kurulum kılavuzu</p>
+                </div>
+                <div class="support-card">
+                    <h3>🛡️ 2 Yıl Garanti</h3>
+                    <p>Ücretsiz teknik destek dahil</p>
+                </div>
+                <div class="support-card">
+                    <h3>🔄 14 Gün İade</h3>
+                    <p>Memnun kalmazsanız iade garantisi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Modal -->
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBuyModal()">&times;</span>
+            <h2>Sipariş Formu</h2>
+            <form id="orderForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="hidden" name="product" id="productName">
+                <input type="hidden" name="price" id="productPrice">
+                
+                <div class="form-group">
+                    <label>Ad Soyad</label>
+                    <input type="text" name="fullname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Telefon</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>E-posta</label>
+                    <input type="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Adres</label>
+                    <textarea name="address" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>İl</label>
+                    <input type="text" name="city" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>İlçe</label>
+                    <input type="text" name="district" required>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Sipariş Özeti</h3>
+                    <div class="summary-item">
+                        <span id="summaryProduct"></span>
+                        <span id="summaryPrice"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Kargo</span>
+                        <span>Ücretsiz</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Toplam</span>
+                        <span id="totalPrice"></span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">Siparişi Tamamla</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="footer.js"></script>
+    <script src="product-scripts.js"></script>
+</body>
+</html>

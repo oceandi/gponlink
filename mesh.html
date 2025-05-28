@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mesh WiFi Sistemi - GponLink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/logo.png">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <script src="navbar.js"></script>
+    
+    <!-- Hero Section -->
+    <section class="product-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="hero-content">
+            <h1 class="product-title" style="color: white;">Mesh WiFi</h1>
+            <p class="product-subtitle" style="color: #f5f5f7;">Tüm eviniz tek bir ağ.<br>Kesintisiz WiFi deneyimi.</p>
+            <div class="hero-pricing">
+                <span class="price" style="color: white;">₺7.999</span>
+                <span class="price-info" style="color: #f5f5f7;">'den başlayan fiyatlarla</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#buy" class="btn-primary" style="background-color: white; color: #764ba2;">Satın Al</a>
+                <a href="#specs" class="btn-secondary" style="color: white; border-color: white;">Teknik Özellikler</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="static/index/mesh.png" alt="Mesh WiFi">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Akıllı WiFi Sistemi</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏡</div>
+                    <h3>Tüm Evi Kapsar</h3>
+                    <p>600 m²'ye kadar kesintisiz WiFi kapsama alanı</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Seamless Roaming</h3>
+                    <p>Odadan odaya geçerken otomatik ve kesintisiz bağlantı</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI Optimizasyon</h3>
+                    <p>Yapay zeka destekli otomatik kanal ve bant optimizasyonu</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobil Yönetim</h3>
+                    <p>iOS ve Android uygulaması ile kolay kurulum ve yönetim</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="design-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Mükemmel Kapsama</h2>
+            <div class="coverage-visual">
+                <div class="coverage-comparison">
+                    <div class="traditional-wifi">
+                        <h3>Geleneksel Router</h3>
+                        <div class="coverage-diagram traditional">
+                            <div class="router-icon">📡</div>
+                            <div class="signal-rings">
+                                <div class="signal-ring weak"></div>
+                                <div class="signal-ring medium"></div>
+                                <div class="signal-ring strong"></div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Kör noktalar</li>
+                            <li>Zayıf sinyal</li>
+                            <li>Kesintili bağlantı</li>
+                        </ul>
+                    </div>
+                    <div class="mesh-wifi">
+                        <h3>Mesh WiFi Sistemi</h3>
+                        <div class="coverage-diagram mesh">
+                            <div class="mesh-nodes">
+                                <div class="mesh-node">
+                                    <div class="node-icon">⚡</div>
+                                    <div class="node-coverage"></div>
+                                </div>
+                                <div class="mesh-node">
+                                    <div class="node-icon">⚡</div>
+                                    <div class="node-coverage"></div>
+                                </div>
+                                <div class="mesh-node">
+                                    <div class="node-icon">⚡</div>
+                                    <div class="node-coverage"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>%100 kapsama</li>
+                            <li>Güçlü sinyal</li>
+                            <li>Kesintisiz deneyim</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="specs-section">
+        <div class="container">
+            <h2 class="section-title">Teknik Özellikler</h2>
+            <div class="specs-tabs">
+                <button class="spec-tab active" onclick="showSpec('wireless')">Kablosuz</button>
+                <button class="spec-tab" onclick="showSpec('hardware')">Donanım</button>
+                <button class="spec-tab" onclick="showSpec('software')">Yazılım</button>
+                <button class="spec-tab" onclick="showSpec('physical')">Fiziksel</button>
+            </div>
+            
+            <div class="spec-content active" id="wireless">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">WiFi Standardı</span>
+                        <span class="spec-value">802.11ax (WiFi 6E)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Frekans Bantları</span>
+                        <span class="spec-value">2.4, 5 ve 6 GHz (Tri-Band)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Toplam Hız</span>
+                        <span class="spec-value">AX6600 (574 + 1201 + 4804 Mbps)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Mesh Protokolü</span>
+                        <span class="spec-value">802.11k/v/r + AI Mesh</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="hardware">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">İşlemci</span>
+                        <span class="spec-value">1.8 GHz Quad-Core + 2x Co-processor</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">RAM</span>
+                        <span class="spec-value">1 GB DDR4</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Flash Bellek</span>
+                        <span class="spec-value">512 MB NAND</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ethernet</span>
+                        <span class="spec-value">3x Gigabit (1 WAN + 2 LAN)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="software">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Backhaul</span>
+                        <span class="spec-value">Dedicated 5GHz-2 veya 6GHz</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">AI Özellikler</span>
+                        <span class="spec-value">Otomatik Optimizasyon, Band Steering</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ebeveyn Kontrolü</span>
+                        <span class="spec-value">Zaman Sınırlama, İçerik Filtreleme</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Güvenlik</span>
+                        <span class="spec-value">WPA3, VPN, Güvenlik Duvarı</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-content" id="physical">
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Boyutlar (Her Ünite)</span>
+                        <span class="spec-value">110 x 110 x 165 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Ağırlık</span>
+                        <span class="spec-value">400 gram</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Güç Tüketimi</span>
+                        <span class="spec-value">Maksimum 15W (ünite başı)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">LED Gösterge</span>
+                        <span class="spec-value">Çok Renkli Durum LED'i</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy" class="buy-section">
+        <div class="container">
+            <h2 class="section-title">Evinize Uygun Paket</h2>
+            <div class="models-grid">
+                <div class="model-card">
+                    <h3>2'li Paket</h3>
+                    <p class="model-price">₺7.999</p>
+                    <ul class="model-features">
+                        <li>2 mesh ünitesi</li>
+                        <li>300 m²'ye kadar</li>
+                        <li>100 cihaza kadar</li>
+                        <li>WiFi 6 AX3000</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('2li Mesh Paket', 7999)">Satın Al</button>
+                </div>
+                
+                <div class="model-card featured">
+                    <div class="badge">Çok Satan</div>
+                    <h3>3'lü Paket</h3>
+                    <p class="model-price">₺11.999</p>
+                    <ul class="model-features">
+                        <li>3 mesh ünitesi</li>
+                        <li>450 m²'ye kadar</li>
+                        <li>150 cihaza kadar</li>
+                        <li>WiFi 6 AX3000</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('3lü Mesh Paket', 11999)">Satın Al</button>
+                </div>
+                
+                <div class="model-card">
+                    <h3>3'lü Pro Paket</h3>
+                    <p class="model-price">₺17.999</p>
+                    <ul class="model-features">
+                        <li>3 pro mesh ünitesi</li>
+                        <li>600 m²'ye kadar</li>
+                        <li>200 cihaza kadar</li>
+                        <li>WiFi 6E AX6600</li>
+                    </ul>
+                    <button class="btn-buy" onclick="openBuyModal('3lü Pro Mesh Paket', 17999)">Satın Al</button>
+                </div>
+            </div>
+            
+            <div class="expansion-note">
+                <p><strong>Not:</strong> Sisteminizi daha sonra tek ünite ekleyerek genişletebilirsiniz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section class="support-section" style="background-color: #f5f5f7;">
+        <div class="container">
+            <h2 class="section-title">Mobil Uygulama ile Kontrol</h2>
+            <div class="app-features">
+                <div class="app-feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Kolay Kurulum</h3>
+                    <p>Adım adım kurulum rehberi</p>
+                </div>
+                <div class="app-feature">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Aile Kontrolü</h3>
+                    <p>Cihaz bazlı internet yönetimi</p>
+                </div>
+                <div class="app-feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Hız Testi</h3>
+                    <p>Anlık hız ölçümü ve geçmiş</p>
+                </div>
+                <div class="app-feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Güvenlik Taraması</h3>
+                    <p>Ağınızdaki tehditleri tespit edin</p>
+                </div>
+            </div>
+            <div class="app-download">
+                <a href="#" class="app-store-badge">
+                    <img src="https://www.apple.com/v/app-store/b/images/overview/app_store_badge__fblxcwpf1q42_2x.png" alt="App Store">
+                </a>
+                <a href="#" class="google-play-badge">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-card">
+                    <h3>🚚 Ücretsiz Teslimat</h3>
+                    <p>Tüm Türkiye'ye ücretsiz kargo</p>
+                </div>
+                <div class="support-card">
+                    <h3>🏠 Yerinde Kurulum</h3>
+                    <p>İstanbul içi ücretsiz kurulum hizmeti</p>
+                </div>
+                <div class="support-card">
+                    <h3>🛡️ 3 Yıl Garanti</h3>
+                    <p>Sınırsız teknik destek dahil</p>
+                </div>
+                <div class="support-card">
+                    <h3>💯 Memnuniyet Garantisi</h3>
+                    <p>30 gün içinde iade imkanı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Modal -->
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBuyModal()">&times;</span>
+            <h2>Sipariş Formu</h2>
+            <form id="orderForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="hidden" name="product" id="productName">
+                <input type="hidden" name="price" id="productPrice">
+                
+                <div class="form-group">
+                    <label>Ad Soyad</label>
+                    <input type="text" name="fullname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Telefon</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>E-posta</label>
+                    <input type="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Adres</label>
+                    <textarea name="address" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>İl</label>
+                    <input type="text" name="city" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>İlçe</label>
+                    <input type="text" name="district" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Kurulum Tercihi</label>
+                    <select name="installation">
+                        <option value="self">Kendim kuracağım</option>
+                        <option value="professional">Profesyonel kurulum istiyorum (+₺500)</option>
+                    </select>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Sipariş Özeti</h3>
+                    <div class="summary-item">
+                        <span id="summaryProduct"></span>
+                        <span id="summaryPrice"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Kargo</span>
+                        <span>Ücretsiz</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Toplam</span>
+                        <span id="totalPrice"></span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">Siparişi Tamamla</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="footer.js"></script>
+    <script src="product-scripts.js"></script>
+</body>
+</html>
