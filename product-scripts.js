@@ -1,104 +1,22 @@
 // Product Page Scripts
 
-// Buy Modal Functionality
+// Buy Button Functionality
 let selectedProduct = '';
 let selectedPrice = 0;
 
 function openBuyModal(productName, price) {
-    selectedProduct = productName;
-    selectedPrice = price;
+    // Get the page category
+    const pageTitle = document.querySelector('.product-title').textContent;
     
-    // Update modal content
-    document.getElementById('productName').value = `Router ${productName}`;
-    document.getElementById('productPrice').value = price;
-    document.getElementById('summaryProduct').textContent = `Router ${productName}`;
-    document.getElementById('summaryPrice').textContent = `₺${price.toLocaleString('tr-TR')}`;
-    document.getElementById('totalPrice').textContent = `₺${price.toLocaleString('tr-TR')}`;
-    
-    // Show modal
-    document.getElementById('buyModal').style.display = 'block';
-    
-    // Animate modal
-    gsap.from('.modal-content', {
-        y: -50,
-        opacity: 0,
-        duration: 0.4,
-        ease: 'power2.out'
+    // Redirect to checkout page with product details
+    const checkoutParams = new URLSearchParams({
+        product: productName,
+        price: price,
+        category: pageTitle
     });
-}
-
-function closeBuyModal() {
-    gsap.to('.modal-content', {
-        y: -50,
-        opacity: 0,
-        duration: 0.3,
-        ease: 'power2.in',
-        onComplete: () => {
-            document.getElementById('buyModal').style.display = 'none';
-        }
-    });
-}
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-    const modal = document.getElementById('buyModal');
-    if (event.target == modal) {
-        closeBuyModal();
-    }
-}
-
-// Form submission
-document.getElementById('orderForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
     
-    const formData = new FormData(e.target);
-    const submitButton = e.target.querySelector('.btn-submit');
-    
-    // Disable submit button and show loading
-    submitButton.disabled = true;
-    submitButton.textContent = 'Gönderiliyor...';
-    
-    try {
-        const response = await fetch(e.target.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        if (response.ok) {
-            // Success animation
-            submitButton.textContent = '✓ Sipariş Alındı';
-            submitButton.style.backgroundColor = '#34c759';
-            
-            // Prepare order data for confirmation page
-            const orderParams = new URLSearchParams({
-                order: `GP-${new Date().getFullYear()}-${Math.floor(Math.random() * 100000).toString().padStart(5, '0')}`,
-                product: formData.get('product'),
-                price: formData.get('price'),
-                name: formData.get('fullname'),
-                phone: formData.get('phone'),
-                address: formData.get('address'),
-                city: formData.get('city'),
-                district: formData.get('district'),
-                installation: formData.get('installation') || 'self'
-            });
-            
-            // Redirect to confirmation page
-            setTimeout(() => {
-                window.location.href = `order-confirmation.html?${orderParams.toString()}`;
-            }, 1500);
-        } else {
-            throw new Error('Form submission failed');
-        }
-    } catch (error) {
-        submitButton.disabled = false;
-        submitButton.textContent = 'Siparişi Tamamla';
-        alert('Bir hata oluştu. Lütfen tekrar deneyin.');
-        console.error('Error:', error);
-    }
-});
+    window.location.href = `checkout.html?${checkoutParams.toString()}`;
+}
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
