@@ -25,7 +25,6 @@
             </div>
             <div class="hero-actions">
                 <a href="#buy" class="btn-primary">Satın Al</a>
-                <a href="#specs" class="btn-secondary">Teknik Özellikler</a>
             </div>
         </div>
         <div class="hero-image">
@@ -91,103 +90,6 @@
         </div>
     </section>
 
-    <!-- Specs Section -->
-    <section id="specs" class="specs-section">
-        <div class="container">
-            <h2 class="section-title">Teknik Özellikler</h2>
-            <div class="specs-tabs">
-                <button class="spec-tab active" onclick="showSpec('performance')">Performans</button>
-                <button class="spec-tab" onclick="showSpec('connectivity')">Bağlantı</button>
-                <button class="spec-tab" onclick="showSpec('features')">Özellikler</button>
-                <button class="spec-tab" onclick="showSpec('physical')">Fiziksel</button>
-            </div>
-            
-            <div class="spec-content active" id="performance">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Powerline Standardı</span>
-                        <span class="spec-value">G.hn Wave 2</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Maksimum Hız</span>
-                        <span class="spec-value">2000 Mbps</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Frekans Bandı</span>
-                        <span class="spec-value">2-86 MHz</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Maksimum Menzil</span>
-                        <span class="spec-value">300 metre</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="connectivity">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Ethernet Portları</span>
-                        <span class="spec-value">2x Gigabit Ethernet</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">WiFi (Select Modeller)</span>
-                        <span class="spec-value">802.11ac Dual Band</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">WiFi Hızı</span>
-                        <span class="spec-value">AC1200 (300+867 Mbps)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Pass-Through Priz</span>
-                        <span class="spec-value">Dahili (Güç kaybı yok)</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="features">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Şifreleme</span>
-                        <span class="spec-value">128-bit AES</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">QoS</span>
-                        <span class="spec-value">Otomatik Önceliklendirme</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Enerji Tasarrufu</span>
-                        <span class="spec-value">Otomatik Güç Yönetimi</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Uyumluluk</span>
-                        <span class="spec-value">HomePlug AV2 ile uyumlu</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="physical">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Boyutlar</span>
-                        <span class="spec-value">58 x 90 x 40 mm</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Ağırlık</span>
-                        <span class="spec-value">120 gram</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Güç Tüketimi</span>
-                        <span class="spec-value">Maksimum 6W</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Çalışma Sıcaklığı</span>
-                        <span class="spec-value">0°C ~ 40°C</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Buy Section -->
     <section id="buy" class="buy-section">
         <div class="container">
@@ -202,6 +104,18 @@
                         <li>1x Gigabit Ethernet</li>
                         <li>Kompakt tasarım</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>Standart:</strong> HomePlug AV2</p>
+                            <p><strong>Hız:</strong> 1000 Mbps</p>
+                            <p><strong>Menzil:</strong> 300 metre</p>
+                            <p><strong>Port:</strong> 1x Gigabit Ethernet</p>
+                            <p><strong>Şifreleme:</strong> 128-bit AES</p>
+                            <p><strong>Güç:</strong> <6W</p>
+                            <p><strong>Boyut:</strong> 58 x 90 x 40 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('Starter Kit', 1999)">Satın Al</button>
                 </div>
                 
@@ -215,6 +129,18 @@
                         <li>AC1200 dual-band WiFi</li>
                         <li>2x Gigabit Ethernet</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>Powerline:</strong> AV1200 MIMO</p>
+                            <p><strong>WiFi:</strong> AC1200 (300+867 Mbps)</p>
+                            <p><strong>Menzil:</strong> 300 metre</p>
+                            <p><strong>Portlar:</strong> 2x Gigabit Ethernet</p>
+                            <p><strong>Özellik:</strong> WiFi Clone, Pass-through</p>
+                            <p><strong>Güç:</strong> <8W</p>
+                            <p><strong>Boyut:</strong> 68 x 124 x 52 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('WiFi Kit', 2999)">Satın Al</button>
                 </div>
                 
@@ -227,6 +153,18 @@
                         <li>AC1200 WiFi + Mesh</li>
                         <li>Pass-through priz</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>Standart:</strong> G.hn Wave 2</p>
+                            <p><strong>Hız:</strong> 2000 Mbps</p>
+                            <p><strong>WiFi:</strong> AC1200 Mesh</p>
+                            <p><strong>Portlar:</strong> 2x Gigabit + Pass-through</p>
+                            <p><strong>Frekans:</strong> 2-86 MHz</p>
+                            <p><strong>Özellik:</strong> MIMO, Beamforming</p>
+                            <p><strong>Yönetim:</strong> Mobil uygulama</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('Pro Kit', 4499)">Satın Al</button>
                 </div>
             </div>

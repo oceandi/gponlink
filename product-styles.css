@@ -725,6 +725,59 @@ body {
     color: #86868b;
 }
 
+/* Mini Tech Specs in Model Cards */
+.tech-specs-mini {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.tech-specs-mini summary {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1d1d1f;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tech-specs-mini summary::-webkit-details-marker {
+    display: none;
+}
+
+.tech-specs-mini summary::after {
+    content: '+';
+    font-size: 20px;
+    color: #86868b;
+    transition: transform 0.3s ease;
+}
+
+.tech-specs-mini[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.tech-specs-mini .tech-details {
+    padding: 0 16px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tech-specs-mini .tech-details p {
+    margin: 8px 0;
+    color: #515154;
+}
+
+.tech-specs-mini .tech-details strong {
+    color: #1d1d1f;
+    font-weight: 500;
+}
+
 /* How It Works Section */
 .how-it-works {
     display: grid;
@@ -803,5 +856,27 @@ body {
     
     .models-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .model-card {
+        padding: 30px 20px;
+    }
+    
+    .tech-specs-mini .tech-details {
+        font-size: 13px;
+    }
+    
+    .coverage-comparison {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .how-it-works {
+        grid-template-columns: 1fr;
+    }
+    
+    .app-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }

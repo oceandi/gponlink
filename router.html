@@ -25,7 +25,6 @@
             </div>
             <div class="hero-actions">
                 <a href="#buy" class="btn-primary">Satın Al</a>
-                <a href="#specs" class="btn-secondary">Teknik Özellikler</a>
             </div>
         </div>
         <div class="hero-image">
@@ -83,103 +82,6 @@
         </div>
     </section>
 
-    <!-- Specs Section -->
-    <section id="specs" class="specs-section">
-        <div class="container">
-            <h2 class="section-title">Teknik Özellikler</h2>
-            <div class="specs-tabs">
-                <button class="spec-tab active" onclick="showSpec('wireless')">Kablosuz</button>
-                <button class="spec-tab" onclick="showSpec('hardware')">Donanım</button>
-                <button class="spec-tab" onclick="showSpec('software')">Yazılım</button>
-                <button class="spec-tab" onclick="showSpec('physical')">Fiziksel</button>
-            </div>
-            
-            <div class="spec-content active" id="wireless">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">WiFi Standardı</span>
-                        <span class="spec-value">802.11ax (WiFi 6)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Frekans Bantları</span>
-                        <span class="spec-value">2.4 GHz ve 5 GHz (Dual Band)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Maksimum Hız</span>
-                        <span class="spec-value">AX3000 (574 + 2402 Mbps)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Anten</span>
-                        <span class="spec-value">4x Harici Yüksek Kazançlı Anten</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="hardware">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">İşlemci</span>
-                        <span class="spec-value">1.5 GHz Quad-Core CPU</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">RAM</span>
-                        <span class="spec-value">512 MB DDR3</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Flash Bellek</span>
-                        <span class="spec-value">128 MB</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Ethernet Portları</span>
-                        <span class="spec-value">1x WAN + 4x LAN Gigabit</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="software">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Güvenlik</span>
-                        <span class="spec-value">WPA3, WPA2, Güvenlik Duvarı</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">QoS</span>
-                        <span class="spec-value">Akıllı Bant Genişliği Yönetimi</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">VPN</span>
-                        <span class="spec-value">PPTP, L2TP, OpenVPN Desteği</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Yönetim</span>
-                        <span class="spec-value">Web Arayüzü, Mobil Uygulama</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="physical">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Boyutlar</span>
-                        <span class="spec-value">230 x 144 x 35 mm</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Ağırlık</span>
-                        <span class="spec-value">450 gram</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Güç Tüketimi</span>
-                        <span class="spec-value">Maksimum 12W</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Çalışma Sıcaklığı</span>
-                        <span class="spec-value">0°C ~ 40°C</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Buy Section -->
     <section id="buy" class="buy-section">
         <div class="container">
@@ -194,6 +96,17 @@
                         <li>150 m²'ye kadar kapsama</li>
                         <li>32 cihaza kadar</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 1.2 GHz Dual-Core</p>
+                            <p><strong>RAM:</strong> 256 MB DDR3</p>
+                            <p><strong>Antenler:</strong> 4x Harici 5dBi</p>
+                            <p><strong>Portlar:</strong> 1x WAN + 4x LAN Gigabit</p>
+                            <p><strong>Güvenlik:</strong> WPA3, Güvenlik Duvarı</p>
+                            <p><strong>Boyut:</strong> 230 x 144 x 35 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('AX1800', 2999)">Satın Al</button>
                 </div>
                 
@@ -207,6 +120,18 @@
                         <li>200 m²'ye kadar kapsama</li>
                         <li>64 cihaza kadar</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 1.5 GHz Quad-Core</p>
+                            <p><strong>RAM:</strong> 512 MB DDR3</p>
+                            <p><strong>Antenler:</strong> 4x Harici 6dBi</p>
+                            <p><strong>Portlar:</strong> 1x WAN + 4x LAN Gigabit</p>
+                            <p><strong>Özellikler:</strong> OFDMA, MU-MIMO, Beamforming</p>
+                            <p><strong>Güvenlik:</strong> WPA3, VPN Sunucu</p>
+                            <p><strong>Boyut:</strong> 230 x 144 x 35 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('AX3000', 3999)">Satın Al</button>
                 </div>
                 
@@ -219,6 +144,18 @@
                         <li>300 m²'ye kadar kapsama</li>
                         <li>128 cihaza kadar</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 2.0 GHz Quad-Core + NPU</p>
+                            <p><strong>RAM:</strong> 1 GB DDR4</p>
+                            <p><strong>Antenler:</strong> 8x Harici Yüksek Kazançlı</p>
+                            <p><strong>Portlar:</strong> 1x 2.5G WAN + 8x Gigabit LAN</p>
+                            <p><strong>Özellikler:</strong> 160MHz Kanal, 8x8 MU-MIMO</p>
+                            <p><strong>Güvenlik:</strong> WPA3, HomeShield Pro</p>
+                            <p><strong>Boyut:</strong> 288 x 288 x 60 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('AX6000', 5999)">Satın Al</button>
                 </div>
             </div>

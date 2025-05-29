@@ -25,7 +25,6 @@
             </div>
             <div class="hero-actions">
                 <a href="#buy" class="btn-primary" style="background-color: white; color: #764ba2;">Satın Al</a>
-                <a href="#specs" class="btn-secondary" style="color: white; border-color: white;">Teknik Özellikler</a>
             </div>
         </div>
         <div class="hero-image">
@@ -113,103 +112,6 @@
         </div>
     </section>
 
-    <!-- Specs Section -->
-    <section id="specs" class="specs-section">
-        <div class="container">
-            <h2 class="section-title">Teknik Özellikler</h2>
-            <div class="specs-tabs">
-                <button class="spec-tab active" onclick="showSpec('wireless')">Kablosuz</button>
-                <button class="spec-tab" onclick="showSpec('hardware')">Donanım</button>
-                <button class="spec-tab" onclick="showSpec('software')">Yazılım</button>
-                <button class="spec-tab" onclick="showSpec('physical')">Fiziksel</button>
-            </div>
-            
-            <div class="spec-content active" id="wireless">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">WiFi Standardı</span>
-                        <span class="spec-value">802.11ax (WiFi 6E)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Frekans Bantları</span>
-                        <span class="spec-value">2.4, 5 ve 6 GHz (Tri-Band)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Toplam Hız</span>
-                        <span class="spec-value">AX6600 (574 + 1201 + 4804 Mbps)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Mesh Protokolü</span>
-                        <span class="spec-value">802.11k/v/r + AI Mesh</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="hardware">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">İşlemci</span>
-                        <span class="spec-value">1.8 GHz Quad-Core + 2x Co-processor</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">RAM</span>
-                        <span class="spec-value">1 GB DDR4</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Flash Bellek</span>
-                        <span class="spec-value">512 MB NAND</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Ethernet</span>
-                        <span class="spec-value">3x Gigabit (1 WAN + 2 LAN)</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="software">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Backhaul</span>
-                        <span class="spec-value">Dedicated 5GHz-2 veya 6GHz</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">AI Özellikler</span>
-                        <span class="spec-value">Otomatik Optimizasyon, Band Steering</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Ebeveyn Kontrolü</span>
-                        <span class="spec-value">Zaman Sınırlama, İçerik Filtreleme</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Güvenlik</span>
-                        <span class="spec-value">WPA3, VPN, Güvenlik Duvarı</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="physical">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Boyutlar (Her Ünite)</span>
-                        <span class="spec-value">110 x 110 x 165 mm</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Ağırlık</span>
-                        <span class="spec-value">400 gram</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Güç Tüketimi</span>
-                        <span class="spec-value">Maksimum 15W (ünite başı)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">LED Gösterge</span>
-                        <span class="spec-value">Çok Renkli Durum LED'i</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Buy Section -->
     <section id="buy" class="buy-section">
         <div class="container">
@@ -224,6 +126,17 @@
                         <li>100 cihaza kadar</li>
                         <li>WiFi 6 AX3000</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 1.5 GHz Quad-Core</p>
+                            <p><strong>RAM:</strong> 512 MB DDR3</p>
+                            <p><strong>Ethernet:</strong> 3x Gigabit (1 WAN + 2 LAN)</p>
+                            <p><strong>Frekans:</strong> 2.4 GHz + 5 GHz</p>
+                            <p><strong>Güvenlik:</strong> WPA3, Güvenlik Duvarı</p>
+                            <p><strong>Boyut:</strong> 110 x 110 x 165 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('2li Mesh Paket', 7999)">Satın Al</button>
                 </div>
                 
@@ -237,6 +150,18 @@
                         <li>150 cihaza kadar</li>
                         <li>WiFi 6 AX3000</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 1.5 GHz Quad-Core</p>
+                            <p><strong>RAM:</strong> 512 MB DDR3</p>
+                            <p><strong>Ethernet:</strong> 3x Gigabit (1 WAN + 2 LAN)</p>
+                            <p><strong>Frekans:</strong> 2.4 GHz + 5 GHz</p>
+                            <p><strong>Backhaul:</strong> Dedicated 5GHz</p>
+                            <p><strong>Güvenlik:</strong> WPA3, AI Koruması</p>
+                            <p><strong>Boyut:</strong> 110 x 110 x 165 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('3lü Mesh Paket', 11999)">Satın Al</button>
                 </div>
                 
@@ -249,6 +174,18 @@
                         <li>200 cihaza kadar</li>
                         <li>WiFi 6E AX6600</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 1.8 GHz Quad-Core + 2x Co-processor</p>
+                            <p><strong>RAM:</strong> 1 GB DDR4</p>
+                            <p><strong>Ethernet:</strong> 1x 2.5G + 2x Gigabit</p>
+                            <p><strong>Frekans:</strong> 2.4 + 5 + 6 GHz (Tri-band)</p>
+                            <p><strong>Backhaul:</strong> Dedicated 6GHz</p>
+                            <p><strong>Güvenlik:</strong> WPA3, VPN, AI Koruması</p>
+                            <p><strong>Boyut:</strong> 110 x 110 x 165 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('3lü Pro Mesh Paket', 17999)">Satın Al</button>
                 </div>
             </div>

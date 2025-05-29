@@ -25,7 +25,6 @@
             </div>
             <div class="hero-actions">
                 <a href="#buy" class="btn-primary">Satın Al</a>
-                <a href="#specs" class="btn-secondary" style="color: white; border-color: white;">Teknik Özellikler</a>
             </div>
         </div>
         <div class="hero-image">
@@ -83,103 +82,6 @@
         </div>
     </section>
 
-    <!-- Specs Section -->
-    <section id="specs" class="specs-section">
-        <div class="container">
-            <h2 class="section-title">Teknik Özellikler</h2>
-            <div class="specs-tabs">
-                <button class="spec-tab active" onclick="showSpec('wireless')">Kablosuz</button>
-                <button class="spec-tab" onclick="showSpec('hardware')">Donanım</button>
-                <button class="spec-tab" onclick="showSpec('software')">Yazılım</button>
-                <button class="spec-tab" onclick="showSpec('physical')">Fiziksel</button>
-            </div>
-            
-            <div class="spec-content active" id="wireless">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">WiFi Standardı</span>
-                        <span class="spec-value">802.11ax (WiFi 6)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Frekans Bantları</span>
-                        <span class="spec-value">2.4 GHz, 5 GHz ve 6 GHz (Tri-Band)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Maksimum Hız</span>
-                        <span class="spec-value">AX6600 (574 + 2402 + 4804 Mbps)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Anten</span>
-                        <span class="spec-value">6x Dahili Yüksek Kazançlı Anten</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="hardware">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">İşlemci</span>
-                        <span class="spec-value">2.0 GHz Quad-Core ARM Cortex-A53</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">RAM</span>
-                        <span class="spec-value">1 GB DDR4</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Flash Bellek</span>
-                        <span class="spec-value">256 MB NAND</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Ethernet</span>
-                        <span class="spec-value">1x 2.5G PoE+ Port</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="software">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">SSID</span>
-                        <span class="spec-value">16 SSID (Her band için)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">VLAN</span>
-                        <span class="spec-value">802.1Q VLAN Tagging</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Yönetim</span>
-                        <span class="spec-value">Cloud Controller, SNMP, SSH</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Mesh</span>
-                        <span class="spec-value">802.11k/v/r Seamless Roaming</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="spec-content" id="physical">
-                <div class="spec-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Boyutlar</span>
-                        <span class="spec-value">220 x 220 x 48 mm</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Ağırlık</span>
-                        <span class="spec-value">650 gram</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Güç Tüketimi</span>
-                        <span class="spec-value">Maksimum 25.5W (PoE+)</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Çalışma Sıcaklığı</span>
-                        <span class="spec-value">-10°C ~ 55°C</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Buy Section -->
     <section id="buy" class="buy-section">
         <div class="container">
@@ -194,6 +96,18 @@
                         <li>200 eşzamanlı kullanıcı</li>
                         <li>PoE+ desteği</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 1.5 GHz Dual-Core</p>
+                            <p><strong>RAM:</strong> 512 MB DDR4</p>
+                            <p><strong>Antenler:</strong> 4x4 MIMO Dahili</p>
+                            <p><strong>Port:</strong> 1x Gigabit PoE+</p>
+                            <p><strong>SSID:</strong> 8 SSID desteği</p>
+                            <p><strong>Güç:</strong> 802.3at PoE+ (25.5W)</p>
+                            <p><strong>Boyut:</strong> 220 x 220 x 48 mm</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('AX1800 Pro', 4499)">Satın Al</button>
                 </div>
                 
@@ -207,6 +121,18 @@
                         <li>400 eşzamanlı kullanıcı</li>
                         <li>PoE+ ve 2.5G Ethernet</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 2.0 GHz Quad-Core ARM</p>
+                            <p><strong>RAM:</strong> 1 GB DDR4</p>
+                            <p><strong>Antenler:</strong> 4x4 + 4x4 MIMO</p>
+                            <p><strong>Port:</strong> 1x 2.5G PoE+</p>
+                            <p><strong>SSID:</strong> 16 SSID desteği</p>
+                            <p><strong>Özellik:</strong> VLAN, 802.11k/v/r</p>
+                            <p><strong>Yönetim:</strong> Cloud Controller</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('AX3600 Pro', 6999)">Satın Al</button>
                 </div>
                 
@@ -219,6 +145,18 @@
                         <li>600 eşzamanlı kullanıcı</li>
                         <li>PoE++ ve 10G uplink</li>
                     </ul>
+                    <details class="tech-specs-mini">
+                        <summary>Teknik Detaylar</summary>
+                        <div class="tech-details">
+                            <p><strong>İşlemci:</strong> 2.2 GHz Quad-Core + NPU</p>
+                            <p><strong>RAM:</strong> 2 GB DDR4</p>
+                            <p><strong>Frekans:</strong> 2.4 + 5 + 6 GHz</p>
+                            <p><strong>Port:</strong> 1x 10G + 1x 2.5G</p>
+                            <p><strong>MU-MIMO:</strong> 8x8:8 + 4x4:4</p>
+                            <p><strong>Güç:</strong> 802.3bt PoE++ (60W)</p>
+                            <p><strong>Sertifika:</strong> IP54, Plenum</p>
+                        </div>
+                    </details>
                     <button class="btn-buy" onclick="openBuyModal('AX6600 Pro', 9999)">Satın Al</button>
                 </div>
             </div>
