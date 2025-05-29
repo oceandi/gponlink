@@ -13,11 +13,10 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="footer.css">
-        <link rel="stylesheet" href="pop.css">
         <link rel="preload" href="/fonts/SF-Pro.woff2" as="font" type="font/woff2" crossorigin>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     </head>
-    <body >
+    <body>
         <script src="navbar.js"></script>
         <div class="loading-spinner">
             <div class="spinner"></div>
@@ -27,7 +26,7 @@
                 <h3 class="highway3" id="white">GponLink - İnternet Ekipmanları ve Ağ Çözümleri</h3>
                 <div class="allbutton">
                     <a href="#products" class="wbutton1">Daha Fazla Bilgi</a>
-                    <a href="#buy" id="fiberButton" class="wbutton2">Satın Alın</a>
+                    <a href="#products" class="wbutton2">Ürünleri İncele</a>
                 </div>
                 <img class="earth" src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/logo.png" alt="WiFi">
             </div>
@@ -35,29 +34,29 @@
                 <h3 class="highway3" id="white">Profesyonel ekibimiz cihazınızı kurup test edene kadar ödeme yapmazsınız</h3>
                 <div class="allbutton">
                     <a href="#services" class="wbutton1">Daha Fazla Bilgi</a>
-                    <a href="#buy" id="fiberButton2" class="wbutton2">Satın Alın</a>
+                    <a href="#products" class="wbutton2">Ürünleri İncele</a>
                 </div>
                 <section class="hero-section">                    
                     <div class="slider-container">
                         <div class="product-slider">
                             <div class="slides-wrapper" id="slides">
                                 <div class="slide">
-                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/1.jpg" alt="Kulaklık Ön Görünüm">
+                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/1.jpg" alt="Ürün Görünüm 1">
                                 </div>
                                 <div class="slide">
-                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/2.jpg" alt="Kulaklık Yan Görünüm">
+                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/2.jpg" alt="Ürün Görünüm 2">
                                 </div>
                                 <div class="slide">
-                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/3.png" alt="Kulaklık Detay">
+                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/3.png" alt="Ürün Görünüm 3">
                                 </div>
                                 <div class="slide">
-                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/7.jpg" alt="Kulaklık Detay">
+                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/7.jpg" alt="Ürün Görünüm 4">
                                 </div>
                                 <div class="slide">
-                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/9.jpg" alt="Kulaklık Detay">
+                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/9.jpg" alt="Ürün Görünüm 5">
                                 </div>
                                 <div class="slide">
-                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/10.jpg" alt="Kulaklık Detay">
+                                    <img src="https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage/10.jpg" alt="Ürün Görünüm 6">
                                 </div>
                             </div>
                             
@@ -83,7 +82,7 @@
                     <p class="subhead">Ev ve ofis kullanımı için<br>yüksek performanslı router'lar</p>
                     <div class="allbutton">
                         <a href="router.html" class="bbutton1">Daha Fazla Bilgi</a>
-                        <a href="router.html#buy" id="superboxButton" class="bbutton2">Satın Alın</a>
+                        <a href="router.html#buy" class="bbutton2">Satın Alın</a>
                     </div>
                     <img class="tvdevice" src="static/index/router.png" alt="Router">
                 </div>
@@ -92,7 +91,7 @@
                     <p class="subhead" id="white">Geniş alan kapsama ve kablosuz bağlantı<br>kalitesi için profesyonel çözümler</p>
                     <div class="allbutton">
                         <a href="ap.html" class="bbutton1">Daha Fazla Bilgi</a>
-                        <a href="ap.html#buy" id="tvPlusButton" class="bbutton2">Satın Alın</a>
+                        <a href="ap.html#buy" class="bbutton2">Satın Alın</a>
                     </div>
                     <img class="tvdevice" src="static/index/ap.png" alt="Access Point">
                 </div>
@@ -103,7 +102,7 @@
                     <p class="subhead">Elektrik hattınız üzerinden yüksek hızlı internet bağlantısı</p>
                     <div class="allbutton">
                         <a href="powerline.html" class="bbutton1">Daha Fazla Bilgi</a>
-                        <a href="powerline.html#buy" id="budsButton" class="bbutton2">Satın Alın</a>
+                        <a href="powerline.html#buy" class="bbutton2">Satın Alın</a>
                     </div>
                     <img class="superbox" src="static/index/powerline.png">
                 </div>
@@ -112,122 +111,12 @@
                     <p class="subhead">Çok katlı mekanlar için<br>kesintisiz WiFi ağı</p>
                     <div class="allbutton">
                         <a href="mesh.html" class="bbutton1">Daha Fazla Bilgi</a>
-                        <a href="mesh.html#buy" id="vdslButton" class="bbutton2">Satın Alın</a>
+                        <a href="mesh.html#buy" class="bbutton2">Satın Alın</a>
                     </div>
                     <img class="tvdevice" src="static/index/mesh.png" alt="Mesh WiFi">
                 </div>
             </div>
             <script src="footer.js"></script>
-        </div>
-        <div id="fiberPopup" class="form-popup">
-            <div class="popup-content">
-                <button class="close-popup">&times;</button>
-                <h2 style="margin-block-end: 20px; font-size: 24px;">Hızlı İletişim Formu</h2>
-                <form id="fiberForm" class="popup-form" action="https://formspree.io/f/mkggwaoa" method="POST">
-                    <input type="hidden" name="form_type" value="fiber">
-                    <div class="form-group">
-                        <label for="fiber-name">Ad</label>
-                        <input type="text" id="fiber-name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-surname">Soyad</label>
-                        <input type="text" id="fiber-surname" name="surname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-phone">Telefon</label>
-                        <input type="tel" id="fiber-phone" name="phone" required>
-                    </div>
-                    <button type="submit" class="submit-button">Gönder</button>
-                </form>
-            </div>
-        </div>
-        <div id="superboxPopup" class="form-popup">
-            <div class="popup-content">
-                <button class="close-popup">&times;</button>
-                <h2 style="margin-block-end: 20px; font-size: 24px;">Router Sipariş Formu</h2>
-                <form id="superboxForm" class="popup-form" action="https://formspree.io/f/xqaazopb" method="POST">
-                    <input type="hidden" name="form_type" value="superbox">
-                    <div class="form-group">
-                        <label for="fiber-name">Ad</label>
-                        <input type="text" id="fiber-name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-surname">Soyad</label>
-                        <input type="text" id="fiber-surname" name="surname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-phone">Telefon</label>
-                        <input type="tel" id="fiber-phone" name="phone" required>
-                    </div>
-                    <button type="submit" class="submit-button">Gönder</button>
-                </form>
-            </div>
-        </div>
-        <div id="tvPlusPopup" class="form-popup">
-            <div class="popup-content">
-                <button class="close-popup">&times;</button>
-                <h2 style="margin-block-end: 20px; font-size: 24px;">Access Point Sipariş Formu</h2>
-                <form id="tvPlusForm" class="popup-form" action="https://formspree.io/f/xzzzpqej" method="POST">
-                    <input type="hidden" name="form_type" value="tv_plus">
-                    <div class="form-group">
-                        <label for="fiber-name">Ad</label>
-                        <input type="text" id="fiber-name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-surname">Soyad</label>
-                        <input type="text" id="fiber-surname" name="surname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-phone">Telefon</label>
-                        <input type="tel" id="fiber-phone" name="phone" required>
-                    </div>
-                    <button type="submit" class="submit-button">Gönder</button>
-                </form>
-            </div>
-        </div>
-        <div id="vdslPopup" class="form-popup">
-            <div class="popup-content">
-                <button class="close-popup">&times;</button>
-                <h2 style="margin-block-end: 20px; font-size: 24px;">Mesh WiFi Sipariş Formu</h2>
-                <form id="vdslForm" class="popup-form" action="https://formspree.io/f/xeoojwap" method="POST">
-                    <input type="hidden" name="form_type" value="vdsl">
-                    <div class="form-group">
-                        <label for="fiber-name">Ad</label>
-                        <input type="text" id="fiber-name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-surname">Soyad</label>
-                        <input type="text" id="fiber-surname" name="surname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-phone">Telefon</label>
-                        <input type="tel" id="fiber-phone" name="phone" required>
-                    </div>
-                    <button type="submit" class="submit-button">Gönder</button>
-                </form>
-            </div>
-        </div>
-        <div id="budsPopup" class="form-popup">
-            <div class="popup-content">
-                <button class="close-popup">&times;</button>
-                <h2 style="margin-block-end: 20px; font-size: 24px;">Powerline Sipariş Formu</h2>
-                <form id="budsForm" class="popup-form" action="https://formspree.io/f/xyzzgaed" method="POST">
-                    <input type="hidden" name="form_type" value="galaxy_buds">
-                    <div class="form-group">
-                        <label for="fiber-name">Ad</label>
-                        <input type="text" id="fiber-name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-surname">Soyad</label>
-                        <input type="text" id="fiber-surname" name="surname" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fiber-phone">Telefon</label>
-                        <input type="tel" id="fiber-phone" name="phone" required>
-                    </div>
-                    <button type="submit" class="submit-button">Gönder</button>
-                </form>
-            </div>
         </div>
         <script src="scripts.js"></script>
     </body>
