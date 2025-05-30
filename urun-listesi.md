@@ -1,153 +1,150 @@
 # GponLink Ürün Listesi ve Teknik Özellikler
 
-## 🌐 ROUTER'LAR
-
-### Router AX1800
-- **Fiyat**: ₺2.999
-- **Teknoloji**: WiFi 6 (802.11ax)
-- **Hız**: 1.8 Gbps (574 + 1201 Mbps)
-- **Kapsama**: 150 m²
-- **Cihaz Kapasitesi**: 32 cihaz
-- **Özellikler**: 
-  - 4x Gigabit Ethernet
-  - WPA3 güvenlik
-  - OFDMA & MU-MIMO
-  - Ebeveyn kontrolü
-
-### Router AX3000 (ÖNERİLEN)
-- **Fiyat**: ₺3.999
-- **Teknoloji**: WiFi 6 (802.11ax)
-- **Hız**: 3.0 Gbps (574 + 2402 Mbps)
-- **Kapsama**: 200 m²
-- **Cihaz Kapasitesi**: 64 cihaz
-- **Özellikler**:
-  - 1.5 GHz Quad-Core işlemci
-  - 512 MB RAM
-  - 4x harici anten
-  - VPN sunucu desteği
-
-### Router AX6000
-- **Fiyat**: ₺5.999
-- **Teknoloji**: WiFi 6 (802.11ax)
-- **Hız**: 6.0 Gbps (1148 + 4804 Mbps)
-- **Kapsama**: 300 m²
-- **Cihaz Kapasitesi**: 128 cihaz
-- **Özellikler**:
-  - 2.0 GHz Quad-Core işlemci
-  - 1 GB RAM
-  - 8x harici anten
-  - 2.5G WAN portu
-
----
-
 ## 📡 ACCESS POINT'LER
 
-### AP AX1800 Pro
-- **Fiyat**: ₺4.499
-- **Teknoloji**: WiFi 6 Dual-Band
-- **Hız**: 1.8 Gbps
-- **Kullanıcı**: 200 eşzamanlı
-- **Özellikler**:
-  - PoE+ desteği (802.3at)
-  - Tavan montaj kiti
-  - VLAN desteği
-  - Cloud yönetim
+### TL-WA801N
+- **Fiyat**: ₺1.299
+- **Teknoloji**: Wireless N
+- **Hız**: 300 Mbps (2.4 GHz)
+- **Port**: 1x 10/100 Mbps (PoE)
+- **Özellikler**: 
+  - 2x sabit anten
+  - Multi-SSID desteği
+  - 30m Pasif PoE
+  - WPA/WPA2-PSK güvenlik
 
-### AP AX3600 Pro (EN POPÜLER)
-- **Fiyat**: ₺6.999
-- **Teknoloji**: WiFi 6 Dual-Band
-- **Hız**: 3.6 Gbps
-- **Kullanıcı**: 400 eşzamanlı
+### TL-WA1201 (EN POPÜLER)
+- **Fiyat**: ₺2.999
+- **Teknoloji**: AC1200 Dual-Band
+- **Hız**: 867 Mbps (5GHz) + 300 Mbps (2.4GHz)
+- **Port**: 1x Gigabit (Pasif PoE)
 - **Özellikler**:
-  - 2.5G Ethernet portu
-  - MU-MIMO 4x4
-  - Seamless roaming
-  - Enterprise güvenlik
+  - 4x sabit yüksek performans anten
+  - MU-MIMO teknolojisi
+  - Captive Portal
+  - 12V/1.5A güç
 
-### AP AX6600 Pro
-- **Fiyat**: ₺9.999
-- **Teknoloji**: WiFi 6E Tri-Band
-- **Hız**: 6.6 Gbps
-- **Kullanıcı**: 600 eşzamanlı
+### TL-WA3001
+- **Fiyat**: ₺5.499
+- **Teknoloji**: AX3000 WiFi 6
+- **Hız**: 2402 Mbps (5GHz) + 574 Mbps (2.4GHz)
+- **Port**: 1x Gigabit (Pasif PoE)
 - **Özellikler**:
-  - 6 GHz band desteği
-  - 10G uplink portu
-  - PoE++ desteği
-  - AI optimizasyon
+  - 4x sabit anten
+  - Beamforming teknolojisi
+  - WPA3 güvenlik
+  - 48V/0.5A güç
 
 ---
 
 ## ⚡ POWERLINE ADAPTÖRLER
 
-### Powerline Starter Kit
+### TL-WPA4226 KIT
 - **Fiyat**: ₺1.999
-- **İçerik**: 2 adet adaptör
-- **Hız**: 1000 Mbps powerline
-- **Menzil**: 300 metre
+- **İçerik**: 1x WiFi + 1x Ethernet adaptör
+- **Hız**: AV600 (600 Mbps powerline)
+- **WiFi**: 300 Mbps (2.4 GHz)
+- **Özellikler**:
+  - WiFi Clone tek tuşla kopyalama
+  - Dahili priz
+  - 2x 10/100 Mbps port
+  - 300 metre menzil
+
+### TL-WPA7617 KIT (TAVSİYE EDİLEN)
+- **Fiyat**: ₺2.999
+- **İçerik**: TL-WPA7617 + TL-PA7017P
+- **Hız**: AV1000 (1000 Mbps powerline)
+- **WiFi**: AC1200 (867 + 300 Mbps)
 - **Özellikler**:
   - 1x Gigabit Ethernet
-  - Tak ve kullan
-  - 128-bit AES şifreleme
-  - Kompakt tasarım
+  - EasyMesh desteği
+  - OneMesh uyumlu
+  - Dahili priz
 
-### Powerline WiFi Kit (TAVSİYE EDİLEN)
-- **Fiyat**: ₺2.999
-- **İçerik**: 2 adet WiFi adaptör
-- **Hız**: 1200 Mbps powerline + AC1200 WiFi
-- **Menzil**: 300 metre
-- **Özellikler**:
-  - 2x Gigabit Ethernet
-  - Dual-band WiFi
-  - WiFi Clone özelliği
-  - Pass-through priz
-
-### Powerline Pro Kit
+### TL-WPA8631P KIT
 - **Fiyat**: ₺4.499
-- **İçerik**: 3 adet WiFi adaptör
-- **Hız**: 2000 Mbps G.hn + AC1200 WiFi
-- **Menzil**: 300 metre
+- **İçerik**: TL-WPA8631P + TL-PA8010P
+- **Hız**: AV1300 (1300 Mbps powerline)
+- **WiFi**: AC1200 Dual-Band + 2x2 MIMO
 - **Özellikler**:
-  - G.hn Wave 2 teknolojisi
-  - Mesh network desteği
-  - MIMO teknolojisi
-  - Mobil uygulama
+  - 3x Gigabit port
+  - WiFi Auto-Sync
+  - WPA3 güvenlik
+  - Dahili priz
 
 ---
 
 ## 🏠 MESH WiFi SİSTEMLERİ
 
-### Mesh 2'li Paket
-- **Fiyat**: ₺7.999
-- **İçerik**: 2 mesh ünitesi
-- **Kapsama**: 300 m²
-- **Cihaz**: 100 cihaz
+### Deco M4 (2'li Paket)
+- **Fiyat**: ₺4.999
+- **Teknoloji**: AC1200 WiFi 5
+- **Hız**: 867 Mbps (5GHz) + 300 Mbps (2.4GHz)
+- **Kapsama**: 180 m²
 - **Özellikler**:
-  - WiFi 6 AX3000
-  - Tri-band backhaul
-  - Seamless roaming
-  - Ebeveyn kontrolü
+  - 100 cihaz desteği
+  - 2x Gigabit port (her ünite)
+  - Beamforming, MU-MIMO
+  - Deco app ile kolay kurulum
 
-### Mesh 3'lü Paket (ÇOK SATAN)
+### Deco PX50 (2'li Paket) (ÇOK SATAN)
+- **Fiyat**: ₺9.999
+- **Teknoloji**: AX3000 WiFi 6 + G.hn Powerline
+- **Hız**: 2402 + 574 Mbps WiFi + 1500 Mbps Powerline
+- **Kapsama**: 280 m²
+- **Özellikler**:
+  - 150 cihaz desteği
+  - 3x Gigabit port (her ünite)
+  - AI-Powered Mesh
+  - HomeShield güvenlik
+
+### Deco X60 (2'li Paket)
 - **Fiyat**: ₺11.999
-- **İçerik**: 3 mesh ünitesi
-- **Kapsama**: 450 m²
-- **Cihaz**: 150 cihaz
+- **Teknoloji**: AX5400 WiFi 6
+- **Hız**: 4804 Mbps (5GHz) + 574 Mbps (2.4GHz)
+- **Kapsama**: 370 m²
 - **Özellikler**:
-  - Tüm ev kapsaması
-  - AI optimizasyon
-  - Mobil uygulama
-  - Otomatik güncelleme
+  - 200 cihaz desteği
+  - 6 stream teknolojisi
+  - WPA3 güvenlik
+  - HomeShield Pro
 
-### Mesh 3'lü Pro Paket
-- **Fiyat**: ₺17.999
-- **İçerik**: 3 pro mesh ünitesi
-- **Kapsama**: 600 m²
-- **Cihaz**: 200 cihaz
+---
+
+## 🌐 ROUTER'LAR
+
+### Archer AX12
+- **Fiyat**: ₺2.999
+- **Teknoloji**: WiFi 6 (802.11ax)
+- **Hız**: AX1500 - 1.5 Gbps (1201 + 300 Mbps)
+- **Kapsama**: 2-3 odalı evler
+- **Özellikler**: 
+  - 4x sabit anten
+  - OFDMA & MU-MIMO
+  - Beamforming teknolojisi
+  - EasyMesh uyumlu
+
+### Archer AX72 Pro (ÖNERİLEN)
+- **Fiyat**: ₺4.999
+- **Teknoloji**: WiFi 6 (802.11ax)
+- **Hız**: AX5400 - 5.4 Gbps (4804 + 574 Mbps)
+- **Kapsama**: 3 odalı evler
 - **Özellikler**:
-  - WiFi 6E AX6600
-  - 6 GHz dedicated backhaul
-  - 2.5G Ethernet portları
-  - Profesyonel yönetim
+  - 1 GHz Dual-Core işlemci
+  - 6x anten + 4T4R
+  - 2.5G WAN portu
+  - USB 3.0 + HomeShield
+
+### Archer BE230
+- **Fiyat**: ₺7.999
+- **Teknoloji**: WiFi 7 (802.11be)
+- **Hız**: BE3600 - 3.6 Gbps (2882 + 688 Mbps)
+- **Kapsama**: 3 odalı evler
+- **Özellikler**:
+  - Multi-Link Operation (MLO)
+  - 2x 2.5G port
+  - 4K-QAM teknolojisi
+  - WireGuard VPN desteği
 
 ---
 
@@ -171,9 +168,9 @@
    - 1 yıl yerinde destek
 
 ### Garanti
-- Router: 2 yıl
+- Router: 3 yıl
 - Access Point: 3 yıl
-- Powerline: 2 yıl
+- Powerline: 3 yıl
 - Mesh: 3 yıl
 
 ---
