@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="footer.css">
     <style>
+        /* Mevcut stiller aynı kalacak */
         .checkout-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -121,6 +122,7 @@
         .product-image img {
             max-width: 60px;
             max-height: 60px;
+            object-fit: contain;
         }
         
         .product-details h4 {
@@ -220,6 +222,27 @@
             margin: 0;
         }
         
+        .whatsapp-note {
+            background: #e8f5e9;
+            border: 1px solid #4caf50;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .whatsapp-note h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2e7d32;
+        }
+        
+        .whatsapp-note p {
+            font-size: 14px;
+            color: #1b5e20;
+            margin: 0;
+        }
+        
         @media (max-width: 968px) {
             .checkout-container {
                 grid-template-columns: 1fr;
@@ -243,7 +266,7 @@
     <div class="checkout-container">
         <!-- Form Section -->
         <div class="checkout-form">
-            <form id="checkoutForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form id="checkoutForm">
                 <input type="hidden" name="product" id="productName">
                 <input type="hidden" name="price" id="productPrice">
                 
@@ -267,7 +290,7 @@
                         </div>
                         <div class="form-group">
                             <label for="phone">Telefon *</label>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="5XXXXXXXXX" required>
                         </div>
                     </div>
                 </div>
@@ -284,17 +307,16 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="city">İl *</label>
-                            <select id="city" name="city" required>
+                            <select id="city" name="city" required onchange="updateDistricts()">
                                 <option value="">Seçiniz</option>
-                                <option value="istanbul">İstanbul</option>
-                                <option value="ankara">Ankara</option>
-                                <option value="izmir">İzmir</option>
-                                <!-- Diğer iller eklenecek -->
+                                <option value="bursa">Bursa</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="district">İlçe *</label>
-                            <input type="text" id="district" name="district" required>
+                            <select id="district" name="district" required disabled>
+                                <option value="">Önce il seçiniz</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-row">
@@ -310,6 +332,12 @@
                             </select>
                         </div>
                     </div>
+                </div>
+                
+                <!-- WhatsApp Note -->
+                <div class="whatsapp-note">
+                    <h4>📱 WhatsApp Bildirimi</h4>
+                    <p>Siparişiniz tamamlandıktan sonra WhatsApp üzerinden bildirim alacaksınız.</p>
                 </div>
                 
                 <!-- Payment Note -->
@@ -371,6 +399,51 @@
     <script src="footer.js"></script>
     
     <script>
+        // GOOGLE SHEETS WEB APP URL'İNİ BURAYA YAPIŞTIR
+        const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwaXVY2FlRA39MceGcacDg0zkzW29jzoBaTlyY9-ODcpU9giWhM4WfWZJDHodXles3F/exec';
+        
+        // Bursa ilçeleri
+        const bursaIlceleri = [
+            "Osmangazi",
+            "Yıldırım", 
+            "Nilüfer",
+            "Gürsu",
+            "Kestel",
+            "Mudanya",
+            "Gemlik",
+            "İnegöl",
+            "İznik",
+            "Karacabey",
+            "Keles",
+            "Mustafakemalpaşa",
+            "Orhaneli",
+            "Orhangazi",
+            "Yenişehir",
+            "Büyükorhan",
+            "Harmancık"
+        ];
+        
+        // İl seçildiğinde ilçeleri güncelle
+        function updateDistricts() {
+            const citySelect = document.getElementById('city');
+            const districtSelect = document.getElementById('district');
+            
+            if (citySelect.value === 'bursa') {
+                districtSelect.disabled = false;
+                districtSelect.innerHTML = '<option value="">İlçe seçiniz</option>';
+                
+                bursaIlceleri.forEach(ilce => {
+                    const option = document.createElement('option');
+                    option.value = ilce.toLowerCase();
+                    option.textContent = ilce;
+                    districtSelect.appendChild(option);
+                });
+            } else {
+                districtSelect.disabled = true;
+                districtSelect.innerHTML = '<option value="">Önce il seçiniz</option>';
+            }
+        }
+        
         // Get product details from URL
         const urlParams = new URLSearchParams(window.location.search);
         const product = urlParams.get('product') || '';
@@ -387,14 +460,39 @@
         document.getElementById('subtotal').textContent = `₺${price.toLocaleString('tr-TR')}`;
         document.getElementById('totalAmount').textContent = `₺${price.toLocaleString('tr-TR')}`;
         
-        // Set product image based on category
+        // Set product image based on specific model
         const productImages = {
+            // Router models
+            'Archer AX12': 'static/index/ROUTER/Archer-AX12/Archer AX12.png',
+            'Archer AX72 Pro': 'static/index/ROUTER/Archer-AX72-Pro/Archer-AX72-Pro.png',
+            'Archer BE230': 'static/index/ROUTER/Archer-BE230/Archer-BE230.png',
+            // Access Point models
+            'TL-WA801N': 'static/index/AP/TL-WA801N/TL-WA801N.png',
+            'TL-WA1201': 'static/index/AP/TL-WA1201/TL-WA1201.png',
+            'TL-WA3001': 'static/index/AP/TL-WA3001/TL-WA3001.png',
+            // Powerline models
+            'TL-WPA4226 KIT': 'static/index/POWERLINE/TL-WPA4226-KIT/TL-WPA4226-KIT.png',
+            'TL-WPA7617 KIT': 'static/index/POWERLINE/TL-WPA7617-KIT/TL-WPA7617-KIT.png',
+            'TL-WPA8631P KIT': 'static/index/POWERLINE/TL-WPA8631P-KIT/TL-WPA8631P-KIT.png',
+            // Mesh models
+            'Deco M4 2li Paket': 'static/index/MESH/Deco-M4/Deco-M4.png',
+            'Deco PX50 2li Paket': 'static/index/MESH/Deco-PX50/Deco-PX50.png',
+            'Deco X60 2li Paket': 'static/index/MESH/Deco-X60-V3.20/Deco-X60-V3.20.png'
+        };
+        
+        // Fallback to category image if specific model not found
+        const categoryImages = {
             'Router': 'static/index/router.png',
             'Access Point': 'static/index/ap.png',
             'Powerline': 'static/index/powerline.png',
             'Mesh WiFi': 'static/index/mesh.png'
         };
-        document.getElementById('productImage').src = productImages[category] || '';
+        
+        // Set the product image
+        const productImageSrc = productImages[product] || categoryImages[category] || '';
+        if (productImageSrc) {
+            document.getElementById('productImage').src = productImageSrc;
+        }
         
         // Update pricing based on installation choice
         function updatePricing() {
@@ -412,6 +510,13 @@
             document.getElementById('totalAmount').textContent = `₺${total.toLocaleString('tr-TR')}`;
         }
         
+        // LocalStorage'a sipariş kaydet (offline veri tutma)
+        function saveOrderToLocal(orderData) {
+            const orders = JSON.parse(localStorage.getItem('gponlinkOrders') || '[]');
+            orders.push(orderData);
+            localStorage.setItem('gponlinkOrders', JSON.stringify(orders));
+        }
+        
         // Form submission
         document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -422,23 +527,83 @@
             submitButton.disabled = true;
             submitButton.textContent = 'İşleniyor...';
             
-            // Prepare order data
-            const orderParams = new URLSearchParams({
-                order: `GP-${new Date().getFullYear()}-${Math.floor(Math.random() * 100000).toString().padStart(5, '0')}`,
+            // Sipariş numarası oluştur
+            const orderNumber = `GP-${new Date().getFullYear()}-${Date.now().toString().slice(-6)}`;
+            
+            // Form verilerini hazırla
+            const orderData = {
+                orderNumber: orderNumber,
+                timestamp: new Date().toISOString(),
                 product: formData.get('product'),
                 price: formData.get('price'),
-                name: `${formData.get('firstName')} ${formData.get('lastName')}`,
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
                 phone: formData.get('phone'),
                 address: formData.get('address'),
                 city: formData.get('city'),
                 district: formData.get('district'),
+                zipCode: formData.get('zipCode'),
                 installation: formData.get('installation')
+            };
+            
+            // LocalStorage'a kaydet
+            saveOrderToLocal(orderData);
+            
+            // WhatsApp mesajı oluştur
+            const whatsappMessage = 
+                `🔔 *YENİ SİPARİŞ*\n\n` +
+                `📦 *Sipariş No:* ${orderNumber}\n` +
+                `👤 *Müşteri:* ${orderData.firstName} ${orderData.lastName}\n` +
+                `📱 *Tel:* ${orderData.phone}\n` +
+                `📧 *Email:* ${orderData.email}\n\n` +
+                `🛍️ *Ürün:* ${orderData.product}\n` +
+                `💰 *Fiyat:* ₺${orderData.price}\n` +
+                `🔧 *Kurulum:* ${orderData.installation === 'professional' ? 'Profesyonel (+₺500)' : 'Müşteri'}\n\n` +
+                `📍 *Adres:* ${orderData.address}\n` +
+                `📍 *İlçe/İl:* ${orderData.district}/${orderData.city}`;
+            
+            // WhatsApp URL'sini oluştur
+            const whatsappUrl = `https://wa.me/905324056700?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Google Sheets'e göndermeyi dene
+            if (GOOGLE_SHEETS_URL && GOOGLE_SHEETS_URL !== 'YOUR_GOOGLE_SHEETS_WEB_APP_URL') {
+                try {
+                    const response = await fetch(GOOGLE_SHEETS_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(orderData)
+                    });
+                    console.log('Google Sheets\'e gönderildi');
+                } catch (error) {
+                    console.error('Google Sheets hatası:', error);
+                }
+            }
+            
+            // Sipariş parametrelerini hazırla
+            const orderParams = new URLSearchParams({
+                order: orderNumber,
+                product: orderData.product,
+                price: orderData.price,
+                name: `${orderData.firstName} ${orderData.lastName}`,
+                phone: orderData.phone,
+                address: orderData.address,
+                city: orderData.city,
+                district: orderData.district,
+                installation: orderData.installation,
+                whatsapp: encodeURIComponent(whatsappUrl)
             });
             
-            // Simulate form submission
+            // WhatsApp'ı yeni sekmede aç
+            window.open(whatsappUrl, '_blank');
+            
+            // Onay sayfasına yönlendir
             setTimeout(() => {
                 window.location.href = `order-confirmation.html?${orderParams.toString()}`;
-            }, 1500);
+            }, 1000);
         });
     </script>
 </body>
