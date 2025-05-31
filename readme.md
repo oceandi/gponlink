@@ -136,4 +136,4 @@ Destek: 0532 158 31 84
 
 ---
 
-**Not**: Bu proje Apple'ın tasarım prensiplerinden esinlenilmiştir ancak Apple ile bağlantısı yoktur.
+**Not**: Bu proje Apple'ın tasarım prensiplerinden esinlenilmiştir ancak Apple ile bağlantısı yoktur. 
