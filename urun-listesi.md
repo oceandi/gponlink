@@ -3,7 +3,7 @@
 ## 📡 ACCESS POINT'LER
 
 ### TL-WA801N
-- **Fiyat**: ₺1.299
+- **Fiyat**: ₺999
 - **Teknoloji**: Wireless N
 - **Hız**: 300 Mbps (2.4 GHz)
 - **Port**: 1x 10/100 Mbps (PoE)
@@ -14,7 +14,7 @@
   - WPA/WPA2-PSK güvenlik
 
 ### TL-WA1201 (EN POPÜLER)
-- **Fiyat**: ₺2.999
+- **Fiyat**: ₺1.999
 - **Teknoloji**: AC1200 Dual-Band
 - **Hız**: 867 Mbps (5GHz) + 300 Mbps (2.4GHz)
 - **Port**: 1x Gigabit (Pasif PoE)
@@ -25,7 +25,7 @@
   - 12V/1.5A güç
 
 ### TL-WA3001
-- **Fiyat**: ₺5.499
+- **Fiyat**: ₺3.999
 - **Teknoloji**: AX3000 WiFi 6
 - **Hız**: 2402 Mbps (5GHz) + 574 Mbps (2.4GHz)
 - **Port**: 1x Gigabit (Pasif PoE)
@@ -40,7 +40,7 @@
 ## ⚡ POWERLINE ADAPTÖRLER
 
 ### TL-WPA4226 KIT
-- **Fiyat**: ₺1.999
+- **Fiyat**: ₺2.999
 - **İçerik**: 1x WiFi + 1x Ethernet adaptör
 - **Hız**: AV600 (600 Mbps powerline)
 - **WiFi**: 300 Mbps (2.4 GHz)
@@ -51,7 +51,7 @@
   - 300 metre menzil
 
 ### TL-WPA7617 KIT (TAVSİYE EDİLEN)
-- **Fiyat**: ₺2.999
+- **Fiyat**: ₺3.499
 - **İçerik**: TL-WPA7617 + TL-PA7017P
 - **Hız**: AV1000 (1000 Mbps powerline)
 - **WiFi**: AC1200 (867 + 300 Mbps)
@@ -62,7 +62,7 @@
   - Dahili priz
 
 ### TL-WPA8631P KIT
-- **Fiyat**: ₺4.499
+- **Fiyat**: ₺4.999
 - **İçerik**: TL-WPA8631P + TL-PA8010P
 - **Hız**: AV1300 (1300 Mbps powerline)
 - **WiFi**: AC1200 Dual-Band + 2x2 MIMO
@@ -77,7 +77,7 @@
 ## 🏠 MESH WiFi SİSTEMLERİ
 
 ### Deco M4 (2'li Paket)
-- **Fiyat**: ₺4.999
+- **Fiyat**: ₺2.999
 - **Teknoloji**: AC1200 WiFi 5
 - **Hız**: 867 Mbps (5GHz) + 300 Mbps (2.4GHz)
 - **Kapsama**: 180 m²
@@ -88,7 +88,7 @@
   - Deco app ile kolay kurulum
 
 ### Deco PX50 (2'li Paket) (ÇOK SATAN)
-- **Fiyat**: ₺9.999
+- **Fiyat**: ₺5.999
 - **Teknoloji**: AX3000 WiFi 6 + G.hn Powerline
 - **Hız**: 2402 + 574 Mbps WiFi + 1500 Mbps Powerline
 - **Kapsama**: 280 m²
@@ -99,7 +99,7 @@
   - HomeShield güvenlik
 
 ### Deco X60 (2'li Paket)
-- **Fiyat**: ₺11.999
+- **Fiyat**: ₺7.999
 - **Teknoloji**: AX5400 WiFi 6
 - **Hız**: 4804 Mbps (5GHz) + 574 Mbps (2.4GHz)
 - **Kapsama**: 370 m²
@@ -114,7 +114,7 @@
 ## 🌐 ROUTER'LAR
 
 ### Archer AX12
-- **Fiyat**: ₺2.999
+- **Fiyat**: ₺1.999
 - **Teknoloji**: WiFi 6 (802.11ax)
 - **Hız**: AX1500 - 1.5 Gbps (1201 + 300 Mbps)
 - **Kapsama**: 2-3 odalı evler
@@ -125,7 +125,7 @@
   - EasyMesh uyumlu
 
 ### Archer AX72 Pro (ÖNERİLEN)
-- **Fiyat**: ₺4.999
+- **Fiyat**: ₺3.999
 - **Teknoloji**: WiFi 6 (802.11ax)
 - **Hız**: AX5400 - 5.4 Gbps (4804 + 574 Mbps)
 - **Kapsama**: 3 odalı evler
@@ -136,7 +136,7 @@
   - USB 3.0 + HomeShield
 
 ### Archer BE230
-- **Fiyat**: ₺7.999
+- **Fiyat**: ₺3.499
 - **Teknoloji**: WiFi 7 (802.11be)
 - **Hız**: BE3600 - 3.6 Gbps (2882 + 688 Mbps)
 - **Kapsama**: 3 odalı evler
