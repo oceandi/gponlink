@@ -1,20 +1,21 @@
-// Product Page Scripts
+// product-scripts.js - Düzeltilmiş versiyon
 
 // Buy Button Functionality
-let selectedProduct = '';
-let selectedPrice = 0;
-
 function openBuyModal(productName, price) {
-    // Get the page category
+    // Get the page category from title
     const pageTitle = document.querySelector('.product-title').textContent;
+    
+    // Fiyatı düzgün formatlayalım
+    const cleanPrice = price;
     
     // Redirect to checkout page with product details
     const checkoutParams = new URLSearchParams({
         product: productName,
-        price: price,
+        price: cleanPrice,
         category: pageTitle
     });
     
+    // Checkout sayfasına yönlendir
     window.location.href = `checkout.html?${checkoutParams.toString()}`;
 }
 
@@ -33,26 +34,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Animate elements on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
+if (typeof gsap !== 'undefined') {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            gsap.from(entry.target, {
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                ease: 'power2.out'
-            });
-            observer.unobserve(entry.target);
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                gsap.from(entry.target, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: 'power2.out'
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
     });
-}, observerOptions);
-
-// Observe all sections
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-});
+}
