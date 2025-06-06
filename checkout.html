@@ -10,7 +10,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init("xGha2WYgs8rSDcVGF"); // EmailJS public key
+            emailjs.init("xGha2WYgs8rSDcVGF");
         })();
     </script>
     
@@ -377,73 +377,6 @@
             background: #696969;
         }
         
-        /* Success State */
-        .success-container {
-            display: none;
-            text-align: center;
-            padding: 80px 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            background: #34c759;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 32px;
-            font-size: 40px;
-            color: #fff;
-            animation: successPop 0.6s ease;
-        }
-        
-        @keyframes successPop {
-            0% { transform: scale(0); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-        
-        .success-title {
-            font-size: 48px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        
-        .success-message {
-            font-size: 21px;
-            color: #86868b;
-            margin-bottom: 32px;
-        }
-        
-        .order-number-display {
-            background: #f5f5f7;
-            padding: 16px 24px;
-            border-radius: 12px;
-            font-size: 21px;
-            font-weight: 500;
-            display: inline-block;
-        }
-        
-        .home-button {
-            display: inline-block;
-            margin-top: 24px;
-            padding: 12px 32px;
-            background: #0071e3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 12px;
-            font-size: 17px;
-            transition: all 0.2s ease;
-        }
-        
-        .home-button:hover {
-            background: #0077ed;
-            transform: translateY(-1px);
-        }
-        
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .checkout-container {
@@ -642,19 +575,6 @@
         </div>
     </div>
     
-    <!-- Success Container -->
-    <div class="success-container" id="successContainer">
-        <div class="success-icon">✓</div>
-        <h1 class="success-title">Siparişiniz Alındı!</h1>
-        <p class="success-message">
-            Siparişiniz başarıyla oluşturuldu.<br>
-            E-posta adresinize sipariş detayları gönderildi.
-        </p>
-        <div class="order-number-display" id="orderNumberDisplay">GP20250129A1B2C3</div>
-        <br>
-        <a href="index.html" class="home-button">Ana Sayfaya Dön</a>
-    </div>
-    
     <script>
         // State Management
         let currentStep = 1;
@@ -679,6 +599,46 @@
             document.getElementById('productModel').textContent = orderData.product;
             document.getElementById('productPrice').textContent = `₺${orderData.price.toLocaleString('tr-TR')}`;
             document.getElementById('totalPrice').textContent = `₺${orderData.price.toLocaleString('tr-TR')}`;
+            
+            // Product image mapping
+            const productImages = {
+                // Router models
+                'Archer AX12': 'static/index/router.png',
+                'Archer AX72 Pro': 'static/index/router.png',
+                'Archer BE230': 'static/index/router.png',
+                // Access Point models
+                'TL-WA801N': 'static/index/ap.png',
+                'TL-WA1201': 'static/index/ap.png',
+                'TL-WA3001': 'static/index/ap.png',
+                // Powerline models
+                'TL-WPA4226 KIT': 'static/index/powerline.png',
+                'TL-WPA7617 KIT': 'static/index/powerline.png',
+                'TL-WPA8631P KIT': 'static/index/powerline.png',
+                // Mesh models
+                'Deco M4 2li Paket': 'static/index/mesh.png',
+                'Deco PX50 2li Paket': 'static/index/mesh.png',
+                'Deco X60 2li Paket': 'static/index/mesh.png'
+            };
+            
+            // Category-based fallback images
+            const categoryImages = {
+                'Router': 'static/index/router.png',
+                'Access Point': 'static/index/ap.png',
+                'Powerline Adaptör': 'static/index/powerline.png',
+                'Mesh WiFi': 'static/index/mesh.png'
+            };
+            
+            // Set product image
+            const productImageElement = document.getElementById('productImage');
+            if (productImages[orderData.product]) {
+                productImageElement.src = productImages[orderData.product];
+                productImageElement.alt = orderData.product;
+            } else if (categoryImages[orderData.category]) {
+                productImageElement.src = categoryImages[orderData.category];
+                productImageElement.alt = orderData.category;
+            } else {
+                productImageElement.src = 'https://via.placeholder.com/80/f5f5f7/86868b?text=Ürün';
+            }
             
             // City change handler
             document.getElementById('city').addEventListener('change', (e) => {
@@ -790,12 +750,11 @@
         
         // Validation
         function validateStep(step) {
-            if (step === 0) return true; // No step 0
+            if (step === 0) return true;
             
             let isValid = true;
             
             if (step === 1) {
-                // Validate personal info
                 const fields = ['firstName', 'lastName', 'email', 'phone'];
                 fields.forEach(fieldId => {
                     const field = document.getElementById(fieldId);
@@ -815,7 +774,6 @@
                     }
                 });
             } else if (step === 2) {
-                // Validate delivery info
                 const fields = ['address', 'city', 'district'];
                 fields.forEach(fieldId => {
                     const field = document.getElementById(fieldId);
@@ -833,7 +791,6 @@
         
         function validateCurrentStep() {
             if (currentStep === 3) {
-                // Check terms
                 if (!document.getElementById('terms').checked) {
                     alert('Lütfen satış sözleşmesini kabul ediniz.');
                     return false;
@@ -882,8 +839,8 @@
             try {
                 // Send customer email
                 await emailjs.send(
-                    'service_ydgnhkn', // EmailJS service ID
-                    'template_tudnlwr', // Customer email template ID
+                    'service_ydgnhkn',
+                    'template_tudnlwr',
                     {
                         to_email: orderData.email,
                         customer_name: `${orderData.firstName} ${orderData.lastName}`,
@@ -891,14 +848,15 @@
                         product_name: orderData.product,
                         total_price: orderData.price,
                         delivery_date: orderData.deliveryDate,
-                        order_date: orderData.orderDate
+                        order_date: orderData.orderDate,
+                        customer_email: orderData.email
                     }
                 );
                 
-                // Send admin email (DÜZELTME: Doğru service ID kullanıldı)
+                // Send admin email
                 await emailjs.send(
-                    'service_ydgnhkn', // DÜZELTME: Aynı service ID kullanılmalı
-                    'template_skjs2ap', // Admin email template ID
+                    'service_ydgnhkn',
+                    'template_skjs2ap',
                     {
                         order_number: orderData.orderNumber,
                         customer_name: `${orderData.firstName} ${orderData.lastName}`,
@@ -913,51 +871,31 @@
                     }
                 );
                 
-                // Success
-                setTimeout(() => {
-                    document.getElementById('loadingOverlay').classList.remove('active');
-                    document.getElementById('checkoutContainer').style.display = 'none';
-                    document.querySelector('.progress-container').style.display = 'none';
-                    document.getElementById('successContainer').style.display = 'block';
-                    document.getElementById('orderNumberDisplay').textContent = orderData.orderNumber;
-                    
-                    // Redirect to order confirmation page with parameters
-                    const confirmationParams = new URLSearchParams({
-                        order: orderData.orderNumber,
-                        product: orderData.product,
-                        price: orderData.price,
-                        name: `${orderData.firstName} ${orderData.lastName}`,
-                        phone: orderData.phone,
-                        email: orderData.email,
-                        address: orderData.address,
-                        city: orderData.city,
-                        district: orderData.district
-                    });
-                    
-                    // Redirect after 3 seconds
-                    setTimeout(() => {
-                        window.location.href = `order-confirmation.html?${confirmationParams.toString()}`;
-                    }, 3000);
-                }, 2000);
+                // Direkt order-confirmation sayfasına yönlendir
+                const confirmationParams = new URLSearchParams({
+                    order: orderData.orderNumber,
+                    product: orderData.product,
+                    price: orderData.price,
+                    name: `${orderData.firstName} ${orderData.lastName}`,
+                    phone: orderData.phone,
+                    email: orderData.email,
+                    address: orderData.address,
+                    city: orderData.city,
+                    district: orderData.district
+                });
+                
+                window.location.href = `order-confirmation.html?${confirmationParams.toString()}`;
                 
             } catch (error) {
                 console.error('Email gönderimi hatası:', error);
                 document.getElementById('loadingOverlay').classList.remove('active');
                 
-                // EmailJS hatası için daha açıklayıcı mesaj
                 if (error.text) {
                     console.error('EmailJS Error:', error.text);
                 }
                 
-                // Test için: Email göndermeden devam et
+                // Hata durumunda da yönlendir
                 if (confirm('Email gönderiminde sorun oluştu ancak siparişiniz alındı. Devam etmek ister misiniz?')) {
-                    document.getElementById('loadingOverlay').classList.remove('active');
-                    document.getElementById('checkoutContainer').style.display = 'none';
-                    document.querySelector('.progress-container').style.display = 'none';
-                    document.getElementById('successContainer').style.display = 'block';
-                    document.getElementById('orderNumberDisplay').textContent = orderData.orderNumber;
-                    
-                    // Redirect to confirmation page anyway
                     const confirmationParams = new URLSearchParams({
                         order: orderData.orderNumber,
                         product: orderData.product,
@@ -970,9 +908,7 @@
                         district: orderData.district
                     });
                     
-                    setTimeout(() => {
-                        window.location.href = `order-confirmation.html?${confirmationParams.toString()}`;
-                    }, 3000);
+                    window.location.href = `order-confirmation.html?${confirmationParams.toString()}`;
                 }
             }
         }
@@ -980,12 +916,11 @@
         function getDeliveryDate() {
             const today = new Date();
             const deliveryDate = new Date(today);
-            deliveryDate.setDate(deliveryDate.getDate() + 2); // 2 iş günü sonra
+            deliveryDate.setDate(deliveryDate.getDate() + 2);
             
-            // Hafta sonu kontrolü
-            if (deliveryDate.getDay() === 0) { // Pazar
+            if (deliveryDate.getDay() === 0) {
                 deliveryDate.setDate(deliveryDate.getDate() + 1);
-            } else if (deliveryDate.getDay() === 6) { // Cumartesi
+            } else if (deliveryDate.getDay() === 6) {
                 deliveryDate.setDate(deliveryDate.getDate() + 2);
             }
             
